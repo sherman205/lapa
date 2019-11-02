@@ -21,6 +21,6 @@ const IndexPage = () => {
       <Footer />
     </>
   )
-  }
+}
 
 export default IndexPage;
