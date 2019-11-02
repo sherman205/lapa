@@ -1,0 +1,29 @@
+.nav-bar{
+
+    display: flex;
+    align-items: center;
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        height: 100px;
+        max-width: 40%;
+        margin: auto;
+
+        a{
+            margin: 0 20px;
+        }
+
+        .nav-title{
+            border: 1px solid #000;
+            padding-bottom: 3px;
+            padding-left: 15px;
+            padding-right: 5px;
+            letter-spacing: 10px;
+        }
+    }
+
+    .search{
+        position: relative;
+    }
+}

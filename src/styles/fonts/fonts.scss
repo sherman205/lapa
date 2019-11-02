@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "NexaLight";
+    src: url("./fonts/NexaLight.otf")
+}
+@font-face {
+    font-family: "PlayFair";
+    src: url("./fonts/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+    font-family: "PlayFair-BoldItalic";
+    src: url("./fonts/PlayfairDisplay-BoldItalic.ttf");
+}
+@font-face {
+    font-family: "OpenSansCondensed";
+    src: url("./fonts/OpenSansCondensed-Bold.ttf");
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("./fonts/OpenSans-Regular.ttf");
+}
+
+$NexaLight: "NexaLight";
+$OpenSans: "OpenSans";
+$OpenSansCondensed: "OpenSansCondensed";
+$PlayFair: "Playfair";
+$PlayFairBoldItalic: "Playfair-BoldItalic";

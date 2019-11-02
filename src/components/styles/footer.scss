@@ -1,0 +1,10 @@
+@import '../../styles/colors.scss';
+
+.footer{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: $purple;
+    height: 150px;
+}
+

@@ -1,0 +1,147 @@
+@import './colors.scss';
+
+@import './fonts/fonts.scss';
+
+@media only screen and (min-width: 650px) {
+
+  body {
+    background: $white;
+    margin: 0;
+    height: 100%;
+    font-family: $OpenSans;
+    box-sizing: border-box;
+    border: 20px solid $black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+  .playfair{
+    font-family: $PlayFair;
+  }
+  .playfairBold{
+    font-family: $PlayFairBoldItalic;
+  }
+  .nexaBold{
+    font-family: $OpenSansCondensed;
+  }
+  .nexaLight{
+    font-family: $NexaLight;
+  }
+
+  h1{
+    font-family: $PlayFair;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  h3{
+    font-family: $PlayFair;
+  }
+
+  a{
+    font-family: $NexaLight;
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $black;
+  }
+  .active{
+    background: linear-gradient(to top,$purple,$purple 100%,transparent 100%,transparent);
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+  }
+  .category{
+    font-family: $PlayFairBoldItalic;
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    letter-spacing: 10px;
+    padding: 0 50px;
+  }
+  .header{
+    display: flex;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  button{
+    width: 120px;
+    height: 40px;
+    border: none;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    font-family: $OpenSans;
+    font-size: .8rem;
+    text-transform: lowercase;
+  }
+  button.primary{
+    background: $purple;
+    color: $white;
+  }
+  button.light{
+    background: $white;
+    color: $purple;
+  }
+
+@media only screen and (max-width: 650px) {
+  body{
+    background: $white;
+    box-sizing: border-box;
+    border-left: 5px solid $purple;
+    font-family: $OpenSans;
+    letter-spacing: 1px;
+    margin: 0;
+    height: 100%;
+    min-height: 100vh;
+  }
+  body.noScroll{
+    position: fixed;
+  }
+}
+
+.home{
+    padding: 0 70px;
+
+    .latest{
+        display: flex;
+        justify-content: center;
+    }
+
+    .bar{
+        width: 100px;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid $purple;
+    }
+
+    .recipe-row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+
+        .item {
+            flex-grow: 1;
+            flex-basis: 45%;
+            max-width: 750px;
+            padding: 0 25px;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .mobile-home{
+        padding: 0 20px;
+
+        .title{
+            display: flex;
+            font-size: 2rem;
+            letter-spacing: 3px;
+            margin: 10px 0 20px 0;
+            text-transform: none;
+        }
+    }
+}
