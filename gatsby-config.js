@@ -22,7 +22,17 @@ module.exports = {
         short_name: `Lapa`,
         start_url: `/`,
         display: `minimal-ui`,
-        icon: `src/images/favicon-lapa.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon-lapa.png`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+          },
+        ],
       },
     },
   ],

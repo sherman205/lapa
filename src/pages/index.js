@@ -51,7 +51,18 @@ export const query = graphql`
             date
             description
             content
+            servingSize
+            totalTime
+            ingredients
+            instructions
             featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            recipeImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid

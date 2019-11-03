@@ -1,0 +1,133 @@
+@import '../styles/colors.scss';
+
+
+.recipe{
+    display: flex;
+    height: calc(100vh - 40px);
+
+    .recipe-left{
+        width: 60%;
+        overflow-y: auto;
+
+        .recipe-content{
+            padding: 0 50px 50px 50px;
+
+            .title{
+                display: flex;
+                justify-content: center;
+                font-size: 3rem;
+                margin: 0;
+            }
+
+            .date{
+                font-size: .8rem;
+                padding-top: 20px;
+            }
+
+            .content{
+                font-size: .8rem;
+            }
+
+            .recipe-info{
+                border: 1px solid $black;
+                font-size: .8rem;
+                padding: 1rem;
+
+                p{
+                    margin: 0;
+                }
+
+                .pre-recipe-info{
+                    letter-spacing: 2px;
+                }
+
+                .info-title{
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+
+                ul, ol {
+                    list-style: none;
+                    padding: 0;
+
+                    li{
+                        border-bottom: 1px dotted $black;
+                        padding: 10px 0;
+                    }
+                }
+            }
+
+            .tag-us{
+                padding: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+    .recipe-right{
+        width: 40%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+  .recipe-mobile{
+      padding: 0 20px;
+      font-size: .8rem;
+
+      img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .title{
+            display: flex;
+            font-size: 2rem;
+            letter-spacing: 3px;
+            margin: 10px 0;
+            justify-content: center;
+            text-transform: none;
+        }
+        .date{
+            padding-top: 10px;
+        }
+        .recipe-info{
+            border: 1px solid $black;
+            font-size: .8rem;
+            padding: 1rem;
+
+            p{
+                margin: 0;
+            }
+
+            .pre-recipe-info{
+                letter-spacing: 2px;
+            }
+
+            .info-title{
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+
+            ul, ol {
+                list-style: none;
+                padding: 0;
+
+                li{
+                    border-bottom: 1px dotted $black;
+                    padding: 10px 0;
+                }
+            }
+        }
+
+        .tag-us{
+            padding: 20px;
+            text-align: center;
+        }
+    }
+}
