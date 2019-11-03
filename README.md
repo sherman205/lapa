@@ -1,8 +1,8 @@
-<p align="center">
+<div align="center">
   <div>
     <img alt="Lapa" src="./src/images/favicon-lapa.png" width="60" />
   </div>
-</p>
+</div>
 <h1 align="center">
   Lapa Eats
 </h1>

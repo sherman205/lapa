@@ -38,7 +38,8 @@ const About = ({data}) => {
 
 export const query = graphql`
 query {
-    allMarkdownRemark {
+    allMarkdownRemark( filter: { fileAbsolutePath: { regex: "/about/" } })
+    {
       edges {
         node {
           frontmatter {
