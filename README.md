@@ -16,6 +16,7 @@
 
     ```shell
     cd lapa/
+    npm install
     gatsby develop
     ```
 

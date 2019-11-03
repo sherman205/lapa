@@ -15,5 +15,15 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Lapa`,
+        short_name: `Lapa`,
+        start_url: `/`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon-lapa.png`, // This path is relative to the root of the site.
+      },
+    },
   ],
 }
