@@ -20,12 +20,14 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const path = node.frontmatter.path
-    createPage({
-      path,
-      component: recipeTemplate,
-      context: {
-        pathSlug: path,
-      },
-    })
+    if (path.startsWith('/recipes/')) {
+      createPage({
+        path,
+        component: recipeTemplate,
+        context: {
+          pathSlug: path,
+        },
+      })
+    }
   })
 }
