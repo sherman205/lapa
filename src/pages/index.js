@@ -21,7 +21,7 @@ const IndexPage = ( {data} ) => {
           {
             data.recipes.edges.map(edge => {
               return (
-                <div className="item" key={edge.node.frontmatter.path}>
+                <div className="item" key={edge.node.fields.slug}>
                   <RecipePreview node={edge.node} />
                 </div>
               )
@@ -44,8 +44,12 @@ export const query = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
+            tags
             path
             date
             description

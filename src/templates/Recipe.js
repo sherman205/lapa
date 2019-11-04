@@ -3,11 +3,11 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import NavSmall from '../components/navSmall';
 import FooterSmall from '../components/footerSmall';
-import './Recipe.scss';
+import './recipe.scss';
 
 const Recipe = ({ data }) => {
     const { markdownRemark } = data
-    const { title, date, servingSize, totalTime, ingredients, instructions } = markdownRemark.frontmatter;
+    const { title, date, servingSize, totalTime, ingredients, instructions, tags } = markdownRemark.frontmatter;
     const html = markdownRemark.html;
     const img = markdownRemark.frontmatter.recipeImage.childImageSharp.fluid;
     return (
@@ -49,27 +49,29 @@ const Recipe = ({ data }) => {
   }
 
 export const query = graphql`
-  query($pathSlug: String!) {
+  query($slug: String!) {
     markdownRemark(
-        frontmatter: { path: { eq: $pathSlug } }
+      fields: { slug: { eq: $slug } }
     ) 
     {
-        frontmatter {
-            title
-            date
-            servingSize
-            totalTime
-            ingredients
-            instructions
-            recipeImage {
-                childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
+      html
+      frontmatter {
+        title
+        path
+        tags
+        date
+        servingSize
+        totalTime
+        ingredients
+        instructions
+        recipeImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
             }
+          }
         }
-        html
+      }
     }
 }
 `

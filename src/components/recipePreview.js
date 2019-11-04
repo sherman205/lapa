@@ -8,7 +8,7 @@ const RecipePreview = ( {node} ) => {
     return (
         <div className="recipePreview">
             <div className="image">
-                <Link to={node.frontmatter.path}>
+                <Link to={node.fields.slug}>
                     <Img className="image-1x1" fluid={img} alt="Recipe" />
                 </Link>
             </div>
@@ -18,7 +18,7 @@ const RecipePreview = ( {node} ) => {
                 <div className="border" />
                 <p className="description nexaBold">{node.frontmatter.description}</p>
                 <div className="content" dangerouslySetInnerHTML={{ __html: node.html }} />
-                <Link to={node.frontmatter.path}>
+                <Link to={node.fields.slug}>
                     <p className="more nexaBold">...</p>
                 </Link>
             </div>

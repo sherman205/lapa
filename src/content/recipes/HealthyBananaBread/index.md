@@ -2,6 +2,7 @@
 path: "/recipes/healthy-banana-bread"
 date: "2019-05-28"
 title: "Healthy Banana Bread"
+tags: ["healthy", "banana", "bread"]
 featuredImage: ./healthy_banana_bread_1x1.jpg
 recipeImage: ./healthy_banana_bread_3x4.jpg
 description: "Tastes just like the banana bread you know and love, but without refined sugar and vegetable oils."
