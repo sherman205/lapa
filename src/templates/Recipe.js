@@ -8,8 +8,6 @@ import './Recipe.scss';
 const Recipe = ({ data }) => {
     const { markdownRemark } = data
     const { title, date, servingSize, totalTime, ingredients, instructions } = markdownRemark.frontmatter;
-    console.log(markdownRemark.frontmatter);
-    console.log(instructions);
     const html = markdownRemark.html;
     const img = markdownRemark.frontmatter.recipeImage.childImageSharp.fluid;
     return (

@@ -7,19 +7,19 @@ const Nav = () => {
         <div className="nav-bar">
             <div className="nav">
                 <div className="left">
-                    <Link exact activeClassName="active" to={'/'}>
+                    <Link activeClassName="active" to={'/'}>
                         <span id="home">Home</span>
                     </Link>
-                    <Link exact activeClassName="active" to={'/recipes'}>
+                    <Link activeClassName="active" to={'/recipes'}>
                         <span id="recipes">Recipes</span>
                     </Link>
                 </div>
                 <h1 className="nav-title playfairBold"> Lapa</h1>
                 <div className="right">
-                    <Link exact activeClassName="active" to={'/about'}>
+                    <Link activeClassName="active" to={'/about'}>
                         <span id="about">About</span>
                     </Link>
-                    <Link exact activeClassName="active" to={'/contact'}>
+                    <Link activeClassName="active" to={'/contact'}>
                         <span id="contact">Contact</span>
                     </Link>
                 </div>

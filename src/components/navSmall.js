@@ -6,16 +6,16 @@ const NavSmall = () => {
     return (
         <div className="navSmall">
             <div className="links">
-                <Link exact activeClassName="active" to={'/'}>
+                <Link activeClassName="active" to={'/'}>
                     <span id="home">Home</span>
                 </Link>
-                <Link exact activeClassName="active" to={'/recipes'}>
+                <Link activeClassName="active" to={'/recipes'}>
                     <span id="recipes">Recipes</span>
                 </Link>
-                <Link exact activeClassName="active" to={'/about'}>
+                <Link activeClassName="active" to={'/about'}>
                     <span id="about">About</span>
                 </Link>
-                <Link exact activeClassName="active" to={'/contact'}>
+                <Link activeClassName="active" to={'/contact'}>
                     <span id="contact">Contact</span>
                 </Link>
             </div>
