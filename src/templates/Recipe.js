@@ -7,7 +7,7 @@ import './recipe.scss';
 
 const Recipe = ({ data }) => {
     const { markdownRemark } = data
-    const { title, date, servingSize, totalTime, ingredients, instructions, tags } = markdownRemark.frontmatter;
+    const { title, date, servingSize, totalTime, ingredients, instructions } = markdownRemark.frontmatter;
     const html = markdownRemark.html;
     const img = markdownRemark.frontmatter.recipeImage.childImageSharp.fluid;
     return (
@@ -58,7 +58,6 @@ export const query = graphql`
       frontmatter {
         title
         path
-        tags
         date
         servingSize
         totalTime

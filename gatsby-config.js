@@ -1,10 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Lapa`,
+    siteUrl: `https://www.lapa-eats.com`,
     description: `Food blog built with React and Gatsby`
   },
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,

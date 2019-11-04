@@ -4,20 +4,20 @@ import NavSmall from '../components/navSmall';
 import FooterSmall from '../components/footerSmall';
 import '../styles/recipes.scss';
 
-// const generateCard = (category) => {
-//     let category_title = category.title;
-//     return (
-//         <Link to={`/results/${category_title}`}>
-//             <div className="wrapper">
-//                 <p>{category.title}</p>
-//                 <div className="dotted-bar"></div>
-//                 <img className="image" src={CONSTANTS.BASE_URL + category.image} alt="Category" />
-//             </div>
-//         </Link>
-//     );
-// }
+const generateCard = (category) => {
+    return (
+        // <Link to={`/results/${category_title}`}>
+            <div className="wrapper">
+                <p>{category}</p>
+                <div className="dotted-bar"></div>
+                {/* <img className="image" src={CONSTANTS.BASE_URL + category.image} alt="Category" /> */}
+            </div>
+        // </Link>
+    );
+}
 
 const Recipes = () => {
+    const categories = ["breakfast", "appetizers", "salad", "soup", "entrees", "heirloom", "drinks", "dessert"];
     return (
         <>
             <NavSmall />
@@ -26,11 +26,11 @@ const Recipes = () => {
                     <div>What are you craving?</div>
                 </div>
                 <div className="categories">
-                    {/* {this.state.categories.map((category, index) => (
-                        <div className="card" key={index}>
+                    {categories.map((category) => (
+                        <div className="card" key={category}>
                             {generateCard(category)}
                         </div>
-                    ))} */}
+                    ))}
                 </div>
             </div>
             <FooterSmall />
