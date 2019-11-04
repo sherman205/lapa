@@ -6,11 +6,7 @@ import FooterSmall from '../components/footerSmall';
 import '../styles/about.scss';
 
 const About = ({data}) => {
-    const title = (data.allMarkdownRemark.edges)[0].node.frontmatter.title;
-    const intro = (data.allMarkdownRemark.edges)[0].node.frontmatter.intro;
-    const whoWeAre = (data.allMarkdownRemark.edges)[0].node.frontmatter.whoWeAre;
-    const whatIsLapa = (data.allMarkdownRemark.edges)[0].node.frontmatter.whatIsLapa;
-    const aboutSite = (data.allMarkdownRemark.edges)[0].node.frontmatter.aboutSite;
+    const { title, intro, whoWeAre, whatIsLapa, aboutSite } = (data.allMarkdownRemark.edges)[0].node.frontmatter;
     const img = (data.allMarkdownRemark.edges)[0].node.frontmatter.featuredImage.childImageSharp.fluid;
 
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 import FooterImage from '../images/logo_purple.png';
-import "./styles/footer.scss";
+import "./styles/footerSmall.scss";
 
 const FooterSmall = () => {
     let imageStyle = {

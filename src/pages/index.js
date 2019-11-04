@@ -20,10 +20,9 @@ const IndexPage = ( {data} ) => {
         <div className="recipe-row">
           {
             data.recipes.edges.map(edge => {
-              const { frontmatter } = edge.node
               return (
-                <div className="item" key={frontmatter.path}>
-                  <RecipePreview frontmatter={frontmatter} />
+                <div className="item" key={edge.node.frontmatter.path}>
+                  <RecipePreview node={edge.node} />
                 </div>
               )
             })
@@ -50,7 +49,6 @@ export const query = graphql`
             path
             date
             description
-            content
             servingSize
             totalTime
             ingredients
@@ -59,21 +57,22 @@ export const query = graphql`
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid
-                  }
                 }
               }
+            }
             recipeImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid
-                  }
                 }
               }
             }
           }
+          html
         }
       }
     }
-  `;
+  }
+`;
 
 export default IndexPage;

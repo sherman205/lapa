@@ -7,16 +7,10 @@ import './Recipe.scss';
 
 const Recipe = ({ data }) => {
     const { markdownRemark } = data
-    const title = markdownRemark.frontmatter.title
-    const date = markdownRemark.frontmatter.date
-    const content = markdownRemark.frontmatter.content
-    const serving_size= markdownRemark.frontmatter.servingSize
-    const total_time = markdownRemark.frontmatter.totalTime
-    const ingredients = markdownRemark.frontmatter.ingredients
-    const instructions = markdownRemark.frontmatter.instructions
-    console.log("hi there")
-    console.log(title)
-    console.log(data)
+    const { title, date, servingSize, totalTime, ingredients, instructions } = markdownRemark.frontmatter;
+    console.log(markdownRemark.frontmatter);
+    console.log(instructions);
+    const html = markdownRemark.html;
     const img = markdownRemark.frontmatter.recipeImage.childImageSharp.fluid;
     return (
         <div className="recipe">
@@ -25,18 +19,22 @@ const Recipe = ({ data }) => {
             <div className="recipe-content">
               <p className="title playfair">{title}</p>
               <div className="date nexaLight">{date}</div>
-              <div className="content">{content}</div>
+              <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
               <div start="md" className="recipe-info">
-                <div className="pre-recipe-info">Serving Size: {serving_size}</div>
-                <div className="pre-recipe-info">Total Time: {total_time}</div>
+                <div className="pre-recipe-info">Serving Size: {servingSize}</div>
+                <div className="pre-recipe-info">Total Time: {totalTime}</div>
                 <br></br>
                 <div className="recipe-ingredients">
                   <span className="info-title playfair">Ingredients</span>
-                  <div>{ingredients}</div>
+                  <ul>
+                    {ingredients && ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
+                  </ul>
                 </div>
                 <div className="recipe-instructions">
                   <span className="info-title playfair">Instructions</span>
-                  <div>{instructions}</div>
+                  <ol>
+                    {instructions && instructions.map((instruction, i) => <li key={i}>{i+1}. {instruction}</li>)}
+                  </ol>
                 </div>
               </div>
               <div className="content tag-us">
@@ -61,7 +59,6 @@ export const query = graphql`
         frontmatter {
             title
             date
-            content
             servingSize
             totalTime
             ingredients
@@ -70,12 +67,13 @@ export const query = graphql`
                 childImageSharp {
                     fluid {
                         ...GatsbyImageSharpFluid
-                        }
                     }
                 }
             }
         }
+        html
     }
+}
 `
 
 export default Recipe;
