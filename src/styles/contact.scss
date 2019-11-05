@@ -1,0 +1,165 @@
+@import './colors.scss';
+
+
+.contact{
+    display: flex;
+    min-height: calc(100vh - 260px);
+
+    .contact-left{
+        width: 60%;
+        overflow-y: auto;
+
+        .contact-content{
+            padding: 0 50px 50px 50px;
+
+            .title{
+                display: flex;
+                font-size: 2rem;
+                letter-spacing: 3px;
+                justify-content: center;
+                margin: 10px 0;
+                text-transform: none;
+            }
+
+            .content{
+                font-size: .8rem;
+            }
+
+            .contact-social-media{
+                display: flex;
+                flex-direction: column;
+                padding-top: 20px;
+
+                svg{
+                    width: 10px;
+                }
+
+                .fb-icon{
+                    display: flex;
+                    padding: 5px;
+
+                    .fb{
+                        padding-left: 10px;
+                    }
+                }
+
+                .ig-icon{
+                    display: flex;
+                    padding: 5px;
+
+                    .ig{
+                        padding-left: 10px;
+                    }
+                }
+
+                .pin-icon{
+                    display: flex;
+                    padding: 5px;
+
+                    .pin{
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-right{
+        width: 40%;
+        overflow-y: auto;
+
+        form{
+            padding: 0 70px;
+            font-size: .8rem;
+
+            input{
+                width: 100%;
+                height: 25px;
+                margin-bottom: 15px;
+                border: 1px solid $gray;
+            }
+            textarea{
+                height: 200px;
+                width: 100%;
+                resize: none;
+                font-family: inherit;
+                border: 1px solid $gray;
+                margin-bottom: 15px;
+            }
+
+            p{
+                margin: 5px 0;
+            }
+
+            .help-block{
+                color: $red;
+            }
+
+            .help-message{
+                float: right;
+            }
+
+            .form-submit-success{
+                padding: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+  .mobile-contact{
+      padding: 0 20px;
+      font-size: .8rem;
+
+      img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .title{
+            display: flex;
+            font-size: 2rem;
+            letter-spacing: 3px;
+            margin: 10px 0;
+            justify-content: center;
+            text-transform: none;
+        }
+
+        form{
+            font-size: .8rem;
+            padding: 15px;
+            input{
+                width: 100%;
+                height: 25px;
+                margin-bottom: 15px;
+                border: 1px solid $gray;
+            }
+            
+            textarea{
+                height: 100px;
+                width: 100%;
+                resize: none;
+                font-family: inherit;
+                border: 1px solid $gray;
+                margin-bottom: 15px;
+            }
+
+            p{
+                margin: 5px 0;
+            }
+
+            .help-block{
+                color: $red;
+            }
+
+            .help-message{
+                float: right;
+            }
+
+            .form-submit-success{
+                padding: 15px;
+            }
+
+        }
+    }
+}
