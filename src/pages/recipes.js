@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "gatsby";
 import NavSmall from '../components/navSmall';
 import FooterSmall from '../components/footerSmall';
+import Root from '../components/root';
 import '../styles/recipes.scss';
 
 const generateCard = (category) => {
@@ -16,10 +17,11 @@ const generateCard = (category) => {
     );
 }
 
-const Recipes = () => {
+const Recipes = ( { data}) => {
     const categories = ["breakfast", "appetizers", "salad", "soup", "entrees", "heirloom", "drinks", "dessert"];
     return (
         <>
+            <Root metadata={data.metadata.siteMetadata} />
             <NavSmall />
             <div className="recipe-categories">
                 <div className="categories-intro playfair">
@@ -37,5 +39,16 @@ const Recipes = () => {
         </>
     );
 }
+
+export const pageQuery = graphql`
+  {
+    metadata: site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
 
 export default Recipes;

@@ -3,19 +3,22 @@ import Img from "gatsby-image";
 import { graphql } from "gatsby";
 import NavSmall from '../components/navSmall';
 import FooterSmall from '../components/footerSmall';
+import Root from '../components/root';
 import '../styles/about.scss';
 
 const About = ({data}) => {
-    const { title } = (data.allMarkdownRemark.edges)[0].node.frontmatter;
-    const img = (data.allMarkdownRemark.edges)[0].node.frontmatter.featuredImage.childImageSharp.fluid;
+    const { title } = (data.about.edges)[0].node.frontmatter;
+    const img = (data.about.edges)[0].node.frontmatter.featuredImage.childImageSharp.fluid;
 
     return (
+      <>
+        <Root metadata={data.metadata.siteMetadata} />
         <div className="about">
             <div className="about-left">
                 <NavSmall />
                 <div className="about-content">
                     <p className="title playfair">{title}</p>
-                    <div dangerouslySetInnerHTML={{ __html: (data.allMarkdownRemark.edges)[0].node.html }} />
+                    <div dangerouslySetInnerHTML={{ __html: (data.about.edges)[0].node.html }} />
                 </div>
                 <FooterSmall />
             </div>
@@ -23,12 +26,13 @@ const About = ({data}) => {
                 <Img className="img" fluid={img} alt="About" />
             </div>
         </div>
+      </>
     );
 }
 
 export const query = graphql`
-query {
-    allMarkdownRemark( filter: { fileAbsolutePath: { regex: "/about/" } })
+{
+  about: allMarkdownRemark( filter: { fileAbsolutePath: { regex: "/about/" } })
     {
       edges {
         node {
@@ -46,6 +50,12 @@ query {
             }
           }
         }
+      }
+    }
+  metadata: site {
+    siteMetadata {
+      title
+      description
       }
     }
   }

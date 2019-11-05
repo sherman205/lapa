@@ -1,12 +1,14 @@
 import React from 'react';
 import NavSmall from '../components/navSmall';
 import FooterSmall from '../components/footerSmall';
+import Root from '../components/root';
 
 import '../styles/404.scss';
 
-const NoResults = () => {
+const NoResults = ( {data} ) => {
 	return (
         <>
+            <Root metadata={data.metadata.siteMetadata} />
             <NavSmall />
             <div className="recipe-filtered">
                 <div className="results">
@@ -17,5 +19,16 @@ const NoResults = () => {
         </>
     );
 }
+
+export const pageQuery = graphql`
+  {
+    metadata: site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
 
 export default NoResults;
