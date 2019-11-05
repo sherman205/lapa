@@ -52,21 +52,9 @@ export const query = graphql`
           frontmatter {
             title
             tags
-            path
             date
             description
-            servingSize
-            totalTime
-            ingredients
-            instructions
             featuredImage {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            recipeImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid

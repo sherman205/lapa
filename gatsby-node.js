@@ -5,7 +5,7 @@ const { createFilePath } = require('gatsby-source-filesystem');
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const recipeTemplate = path.resolve("src/templates/recipe.js")
-  const tagTemplate = path.resolve("src/templates/tags.js")
+  const tagTemplate = path.resolve("src/templates/category.js")
 
   const result = await graphql(`
     {
@@ -32,7 +32,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const recipes = result.data.recipesRemark.edges.forEach(({ node }) => {
+  result.data.recipesRemark.edges.forEach(({ node }) => {
     if (node.fields.slug.startsWith('/recipes/')) {
       createPage({
         path: node.fields.slug,
@@ -46,7 +46,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.tagsGroup.group.forEach(tag => {
     createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      path: `/results/${_.kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
