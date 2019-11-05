@@ -6,7 +6,7 @@ import FooterSmall from '../components/footerSmall';
 import '../styles/about.scss';
 
 const About = ({data}) => {
-    const { title, intro, whoWeAre, whatIsLapa, aboutSite } = (data.allMarkdownRemark.edges)[0].node.frontmatter;
+    const { title } = (data.allMarkdownRemark.edges)[0].node.frontmatter;
     const img = (data.allMarkdownRemark.edges)[0].node.frontmatter.featuredImage.childImageSharp.fluid;
 
     return (
@@ -15,13 +15,7 @@ const About = ({data}) => {
                 <NavSmall />
                 <div className="about-content">
                     <p className="title playfair">{title}</p>
-                    <div>{intro}</div>
-                    <h3>Who We Are</h3>
-                    <div>{whoWeAre}</div>
-                    <h3>What Is Lapa</h3>
-                    <div>{whatIsLapa}</div>
-                    <h3>The Site And Beyond</h3>
-                    <div>{aboutSite}</div>
+                    <div dangerouslySetInnerHTML={{ __html: (data.allMarkdownRemark.edges)[0].node.html }} />
                 </div>
                 <FooterSmall />
             </div>
@@ -38,14 +32,11 @@ query {
     {
       edges {
         node {
+          html
           frontmatter {
             title
             path
             date
-            intro
-            whoWeAre
-            whatIsLapa
-            aboutSite
             featuredImage{
                 childImageSharp {
                     fluid {
