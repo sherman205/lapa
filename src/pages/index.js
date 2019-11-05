@@ -1,39 +1,61 @@
 import React from "react";
 import { graphql } from "gatsby"
+import { isMobile } from "react-device-detect";
 import Root from '../components/root';
 import Nav from '../components/nav';
+import NavMobile from '../components/navMobile';
+import MobileSplash from '../components/mobileSplash';
 import Splash from '../components/splash';
 import Footer from '../components/footer';
+import FooterSmall from '../components/footerSmall';
 import RecipePreview from '../components/recipePreview';
 import '../styles/index.scss';
 
 const IndexPage = ( {data} ) => {
-  return (
-    <>
-      <Root metadata={data.metadata.siteMetadata} />
-      <div className="home">
-        <Nav />
-        <Splash />
-        <div className="latest">
-            <span className="bar" />
-            <div className="category">Latest</div>   
-            <span className="bar" />
+  if (!isMobile) {
+    return (
+      <>
+        <Root metadata={data.metadata.siteMetadata} />
+        <div className="home">
+          <Nav />
+          <Splash />
+          <div className="latest">
+              <span className="bar" />
+              <div className="category">Latest</div>   
+              <span className="bar" />
+          </div>
+          <div className="recipe-row">
+            {
+              data.recipes.edges.map(edge => {
+                return (
+                  <div className="item" key={edge.node.fields.slug}>
+                    <RecipePreview node={edge.node} />
+                  </div>
+                )
+              })
+            }
+          </div>
         </div>
-        <div className="recipe-row">
-          {
-            data.recipes.edges.map(edge => {
-              return (
-                <div className="item" key={edge.node.fields.slug}>
-                  <RecipePreview node={edge.node} />
-                </div>
-              )
-            })
-          }
+        <Footer />
+      </>
+    );
+  }
+  else {
+    return(
+      <>
+        <NavMobile />
+        <div className="mobile-home">
+          <MobileSplash />
+          {data.recipes.edges.map(edge => (
+            <div className="recipe-row item" key={edge.node.fields.slug}>
+              <RecipePreview node={edge.node} />
+            </div>
+          ))}
+          <FooterSmall />
         </div>
-      </div>
-      <Footer />
-    </>
-  )
+      </> 
+    );
+  }
 }
 
 export const query = graphql`

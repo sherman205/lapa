@@ -1,0 +1,66 @@
+@import '../../styles/colors.scss';
+
+.nav-mobile{
+    background: $white;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin: auto;
+    padding: 0 20px;
+    .hamburg{
+        padding-right: 20px;
+        .top{
+            background: $black;
+            width: 25px;
+            height: 2px;
+            margin-bottom: 5px;
+        }
+        .bottom{
+            background: $black;
+            width: 15px;
+            height: 2px;
+            margin-top: 5px;
+        }
+    }
+    .nav-mobile-title{
+        font-size: 1.6rem;
+    }
+    .search{
+        position: absolute;
+        right: 20px;
+    }
+}
+.slide-menu {
+    background: $purple;
+    display: flex;
+	position: fixed;
+	left: 0;
+    top: 60px;
+    transition: transform .5s
+              cubic-bezier(0, .5, 0, 1);
+		
+	width: 100vw;
+    height: calc(100vh - 60px);
+    z-index: 10;
+    
+    .links{
+        display: grid;
+        align-items: center;
+        height: 60%;
+        margin: auto 0;
+
+        span{
+            color: $white;
+            font-size: 2.5rem;
+            text-transform: lowercase;
+            letter-spacing: 6px;
+            padding: 0 0 0 70px;
+        }
+    }
+}
+.slide-menu.show{
+    transform: translate3d(0, 0, 0);
+}	
+.slide-menu.hide{
+    transform: translate3d(-100vw, 0, 0);
+}

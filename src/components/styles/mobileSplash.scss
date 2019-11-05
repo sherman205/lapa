@@ -1,0 +1,58 @@
+@import '../../styles/colors.scss';
+
+.mobile-splash{
+    max-height: 712px;
+    height: calc(100vh + 80px);
+
+    .circle { 
+        width: 100vw;
+        max-height: 812px;
+        height: calc(100vh + 180px);
+        background: #e7e3ed;
+        border-bottom-left-radius: 125px;
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        z-index: -10;
+    }
+
+    .welcome{
+        margin: 100px 0 0 0;
+
+        p{
+            font-size: 3rem;
+            margin: 0;
+        }
+    }
+    .summary{
+        font-size: .8rem;
+        margin: 50px 0 0 0;
+    }
+
+    .what-do{
+        color: $gray;
+        margin: 50px 0 0 0;
+        text-transform: uppercase;
+
+        p{
+            margin: 10px 0;
+            font-size: .8rem;
+            font-weight: 800;
+        }
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-around;
+        margin: 50px 0 0 0;
+    }
+    .links{
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: space-around;
+        margin: 50px 0 0 0;
+
+        svg{
+            font-size: 1.6rem;
+        }
+    }
+}

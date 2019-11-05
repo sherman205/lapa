@@ -2,10 +2,9 @@
 path: "/about"
 date: "2019-11-02"
 title: "About"
+intro: "Hi there! We are Ryan and Sophia, and we are so glad you stopped by! We are the couple behind Lapa’s culinary creations and adventures. We are so so so excited to share our recipes and stories with all of you!"
 featuredImage: ./about.jpg
 ---
-Hi there! We are Ryan and Sophia, and we are so glad you stopped by! We are the couple behind Lapa’s culinary creations and adventures. We are so so so excited to share our recipes and stories with all of you!
-
 <h3>Who We Are</h3>
 
 We are big foodies! Honestly, we are always thinking about what our next meal will be. Sophia was raised in a Russian Jewish household in southern California and Ryan also grew up celebrating some of the Jewish holidays near Philadelphia. We both ended up moving to northern Virginia for work, where we met. 
