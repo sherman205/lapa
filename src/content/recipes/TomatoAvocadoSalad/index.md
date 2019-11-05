@@ -2,7 +2,7 @@
 path: "/recipes/tomato-avocado-salad"
 date: "2019-04-09"
 title: "Tomato Avocado Salad"
-tags: ["tomato", "avocado", "salad"]
+tags: ["tomato", "avocado", "salad", "tomato avocado salad"]
 featuredImage: ./tomato_avo_salad_1x1.jpeg
 recipeImage: ./tomato_avo_salad_3x4.jpg
 description: "Just a regular salad with a Russian style twist on the dressing. Great as a starter or a meal."

@@ -7,13 +7,13 @@ import '../styles/recipes.scss';
 
 const generateCard = (category) => {
     return (
-        // <Link to={`/results/${category_title}`}>
+        <Link to={`/results/${category}`}>
             <div className="wrapper">
                 <p>{category}</p>
                 <div className="dotted-bar"></div>
                 {/* <img className="image" src={CONSTANTS.BASE_URL + category.image} alt="Category" /> */}
             </div>
-        // </Link>
+        </Link>
     );
 }
 
