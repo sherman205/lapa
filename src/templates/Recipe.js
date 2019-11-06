@@ -93,7 +93,6 @@ export const query = graphql`
       html
       frontmatter {
         title
-        path
         date
         servingSize
         totalTime
