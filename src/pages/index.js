@@ -15,9 +15,14 @@ export default class Index extends Component {
     super(props);
     const width = typeof window !== `undefined` ? window.innerWidth : null;
     this.state = {
-        width: width
+        width: width,
+        isLoaded: false
     };
   };
+
+  componentDidMount = () => {
+    this.setState({ isLoaded: true });
+  }
 
   componentWillMount = () => {
     if (typeof window !== `undefined`) {
@@ -35,53 +40,60 @@ export default class Index extends Component {
   };
 
   render() {
-    const { width } = this.state;
+    const { width, isLoaded } = this.state;
     const { data } = this.props;
     const isMobile = width <= 650;
 
-    if (!isMobile) {
-      return (
-        <>
-          <Root metadata={data.metadata.siteMetadata} />
-          <div className="home">
-            <Nav />
-            <Splash />
-            <div className="latest">
-                <span className="bar" />
-                <div className="category">Latest</div>   
-                <span className="bar" />
-            </div>
-            <div className="recipe-row">
-              {
-                data.recipes.edges.map(edge => {
-                  return (
-                    <div className="item" key={edge.node.fields.slug}>
-                      <RecipePreview node={edge.node} />
-                    </div>
-                  )
-                })
-              }
-            </div>
-          </div>
-          <Footer />
-        </>
-      );
-    }
-    else{
-      return(
-        <>
-          <Root metadata={data.metadata.siteMetadata} />
-          <NavMobile />
-          <div className="mobile-home">
-            <MobileSplash />
-            {data.recipes.edges.map(edge => (
-              <div className="recipe-row item" key={edge.node.fields.slug}>
-                <RecipePreview node={edge.node} />
+    if (isLoaded) {
+      if (!isMobile) {
+        return (
+          <>
+            <Root metadata={data.metadata.siteMetadata} />
+            <div className="home">
+              <Nav />
+              <Splash />
+              <div className="latest">
+                  <span className="bar" />
+                  <div className="category">Latest</div>
+                  <span className="bar" />
               </div>
-            ))}
-            <FooterSmall />
-          </div>
-        </> 
+              <div className="recipe-row">
+                {
+                  data.recipes.edges.map(edge => {
+                    return (
+                      <div className="item" key={edge.node.fields.slug}>
+                        <RecipePreview node={edge.node} />
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </div>
+            <Footer />
+          </>
+        );
+      }
+      else{
+        return(
+          <>
+            <Root metadata={data.metadata.siteMetadata} />
+            <NavMobile />
+            <div className="mobile-home">
+              <MobileSplash />
+              {data.recipes.edges.map(edge => (
+                <div className="recipe-row item" key={edge.node.fields.slug}>
+                  <RecipePreview node={edge.node} />
+                </div>
+              ))}
+              <FooterSmall />
+            </div>
+          </>
+        );
+      }
+    }
+    else {
+      return(
+        <p>Loading...</p>
       );
     }
   }
