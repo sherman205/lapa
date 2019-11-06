@@ -1,5 +1,5 @@
 ---
-path: "/recipes/tomato-avocado-salad"
+path: "/recipes/TomatoAvocadoSalad"
 date: "2019-04-09"
 title: "Tomato Avocado Salad"
 tags: ["tomato", "avocado", "salad", "tomato avocado salad"]

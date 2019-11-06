@@ -1,5 +1,5 @@
 ---
-path: "/recipes/healthy-banana-bread"
+path: "/recipes/HealthyBananaBread"
 date: "2019-05-28"
 title: "Healthy Banana Bread"
 tags: ["healthy", "banana", "bread", "dessert", "breakfast"]
