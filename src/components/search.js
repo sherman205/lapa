@@ -8,7 +8,6 @@ import './styles/search.scss';
 export default class Search extends Component {
     state = {
         searchString: "",
-        width: window.innerWidth,
         visible: 'hide',
     }
 
@@ -43,9 +42,6 @@ export default class Search extends Component {
 				visible: 'show'
 			}); 
             document.body.classList.add("noScroll");
-			if (this.state.width > 650){
-				this.refs.search.focus();
-			}
 		}
 	}
 

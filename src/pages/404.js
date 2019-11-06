@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from "gatsby";
 import NavSmall from '../components/navSmall';
 import FooterSmall from '../components/footerSmall';
 import SearchNoResults from '../components/searchNoResults';

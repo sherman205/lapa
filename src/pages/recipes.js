@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { isMobile } from "react-device-detect";
 import NavSmall from '../components/navSmall';
 import NavMobile from '../components/navMobile';
