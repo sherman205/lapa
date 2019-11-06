@@ -1,12 +1,73 @@
-import React from "react";
+import React, { Component } from "react";
 import { graphql } from "gatsby";
-import { isMobile } from "react-device-detect";
 import NavSmall from '../components/navSmall';
 import NavMobile from '../components/navMobile';
 import FooterSmall from '../components/footerSmall';
 import RecipePreview from '../components/recipePreview';
 import './category.scss';
 
+export default class Category extends Component {
+	constructor(props) {
+    super(props);
+    const width = typeof window !== `undefined` ? window.innerWidth : null;
+    this.state = {
+        width: width
+    };
+  };
+
+  componentWillMount = () => {
+    if (typeof window !== `undefined`) {
+      window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+  }
+  componentWillUnmount = () => {
+    if (typeof window !== `undefined`) {
+      window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+  }
+  handleWindowSizeChange = () => {
+      const width = typeof window !== `undefined` ? window.innerWidth : null;
+      this.setState({ width: width });
+  };
+
+	render() {
+    const { width } = this.state;
+    const { data, pageContext } = this.props;
+    const { tag } = pageContext;
+		const isMobile = width <= 650;
+		if (!isMobile) {
+			return (
+        <>
+          <NavSmall />
+          <div className="recipe-filtered">
+            <div className="results">
+              <p className="search nexaLight">your search results for</p>
+              <p className="query playfair">{tag}</p>
+              <ResultCards data={data} />
+            </div>
+          </div>
+          <FooterSmall />
+        </>
+      );
+		}
+		else {
+			return (
+        <>
+          <NavMobile />
+          <div className="recipe-filtered-mobile">
+            <div className="results">
+              <p className="search nexaLight">your search results for</p>
+              <p className="query playfair">{tag}</p>
+              <ResultCards data={data} />
+            </div>
+            <FooterSmall />
+          </div>
+        </>
+      );
+		}
+
+	}
+}
 
 const ResultCards = ( {data} ) => {
   return (
@@ -21,41 +82,6 @@ const ResultCards = ( {data} ) => {
       })}
     </div>
   );
-}
-
-const Category = ({ pageContext, data }) => {
-  const { tag } = pageContext;
-
-  if (!isMobile) {
-    return (
-      <>
-        <NavSmall />
-        <div className="recipe-filtered">
-          <div className="results">
-            <p className="search nexaLight">your search results for</p>
-            <p className="query playfair">{tag}</p>
-            <ResultCards data={data} />
-          </div>
-        </div>
-        <FooterSmall />
-      </>
-    );
-  }
-  else {
-    return (
-      <>
-        <NavMobile />
-        <div className="recipe-filtered-mobile">
-          <div className="results">
-            <p className="search nexaLight">your search results for</p>
-            <p className="query playfair">{tag}</p>
-            <ResultCards data={data} />
-          </div>
-          <FooterSmall />
-        </div>
-      </>
-    );
-  }
 }
 
 export const pageQuery = graphql`
@@ -89,5 +115,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-export default Category;

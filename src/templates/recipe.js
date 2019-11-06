@@ -1,17 +1,44 @@
-import React from "react";
+import React, { Component } from "react";
 import { graphql } from "gatsby";
-import { isMobile } from "react-device-detect";
 import Img from "gatsby-image";
 import NavSmall from '../components/navSmall';
 import NavMobile from '../components/navMobile';
 import FooterSmall from '../components/footerSmall';
 import './recipe.scss';
 
-const Recipe = ({ data }) => {
+export default class Recipe extends Component {
+  constructor(props) {
+    super(props);
+    const width = typeof window !== `undefined` ? window.innerWidth : null;
+    this.state = {
+        width: width
+    };
+  };
+
+  componentWillMount = () => {
+    if (typeof window !== `undefined`) {
+      window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+  }
+  componentWillUnmount = () => {
+    if (typeof window !== `undefined`) {
+      window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+  }
+  handleWindowSizeChange = () => {
+      const width = typeof window !== `undefined` ? window.innerWidth : null;
+      this.setState({ width: width });
+  };
+
+  render() {
+    const { width } = this.state;
+    const { data } = this.props;
     const { markdownRemark } = data
     const { title, date, servingSize, totalTime, ingredients, instructions } = markdownRemark.frontmatter;
     const html = markdownRemark.html;
     const img = markdownRemark.frontmatter.recipeImage.childImageSharp.fluid;
+    const isMobile = width <= 650;
+
     if (!isMobile) {
       return (
         <div className="recipe">
@@ -83,6 +110,7 @@ const Recipe = ({ data }) => {
       );
     }
   }
+}
 
 export const query = graphql`
   query($slug: String!) {
@@ -109,5 +137,3 @@ export const query = graphql`
     }
 }
 `
-
-export default Recipe;
