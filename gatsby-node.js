@@ -5,9 +5,9 @@ const { createFilePath } = require('gatsby-source-filesystem');
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   console.log("heyyyyy");
-  console.log(path.resolve(`src/content`));
-  const recipeTemplate = require.resolve(__dirname, `src/templates/recipe.js`)
-  const tagTemplate = require.resolve(__dirname, `src/templates/category.js`)
+  console.log(`${__dirname}/src/templates/recipe.js`);
+  const recipeTemplate = `${__dirname}/src/templates/recipe.js`;
+  const tagTemplate = `${__dirname}/src/templates/category.js`;
 
   const result = await graphql(`
     {
@@ -37,8 +37,8 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.recipesRemark.edges.forEach(({ node }) => {
     if (node.fields.slug.startsWith('/recipes/')) {
       createPage({
-        path: "/recipes/HealthyBananaBread/",
-        component: "/opt/build/repo/src/templates/recipe.js",
+        path: node.fields.slug,
+        component: recipeTemplate,
         context: {
           slug: node.fields.slug
         },
