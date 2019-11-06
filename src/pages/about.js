@@ -35,6 +35,7 @@ const About = ({data}) => {
   else {
     return (
       <>
+        <Root metadata={data.metadata.siteMetadata} />
         <NavMobile />
         <div className="mobile-about">
             <div className="about-content">

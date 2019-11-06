@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
+import Search from './search';
 import "./styles/nav.scss";
 
 const Nav = () => {
@@ -25,6 +26,7 @@ const Nav = () => {
                 </div>
             </div>
             <div className="search">
+                <Search />
             </div>
         </div>
     );

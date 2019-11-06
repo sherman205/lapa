@@ -43,6 +43,7 @@ const IndexPage = ( {data} ) => {
   else {
     return(
       <>
+        <Root metadata={data.metadata.siteMetadata} />
         <NavMobile />
         <div className="mobile-home">
           <MobileSplash />

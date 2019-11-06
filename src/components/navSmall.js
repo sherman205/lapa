@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import Search from './search';
 import './styles/navSmall.scss';
 
 const NavSmall = () => {
@@ -20,6 +21,7 @@ const NavSmall = () => {
                 </Link>
             </div>
             <div className="search">
+                <Search />
             </div>
         </div>
     );

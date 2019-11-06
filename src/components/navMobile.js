@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "gatsby";
-// import Search from '../../components/search/search'
-
-// import './navMobile.scss';
+import Search from './search'
+import "./styles/navMobile.scss";
 
 export default class NavMobile extends Component {
     state = {
@@ -42,7 +41,7 @@ export default class NavMobile extends Component {
                     </div>
                     <span className="nav-mobile-title playfair">lapa</span>
                     <div className="search">
-                        {/* <Search /> */}
+                        <Search />
                     </div>
                 </div>
                 <div className={`slide-menu ${this.state.visible}`}>

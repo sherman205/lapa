@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { isMobile } from "react-device-detect";
 import NavSmall from '../components/navSmall';
+import NavMobile from '../components/navMobile';
 import FooterSmall from '../components/footerSmall';
 import RecipePreview from '../components/recipePreview';
 import './category.scss';
@@ -24,19 +26,36 @@ const ResultCards = ( {data} ) => {
 const Category = ({ pageContext, data }) => {
   const { tag } = pageContext;
 
-  return (
-    <>
-      <NavSmall />
-      <div className="recipe-filtered">
-        <div className="results">
-          <p className="search nexaLight">your search results for</p>
-          <p className="query playfair">{tag}</p>
-          <ResultCards data={data} />
+  if (!isMobile) {
+    return (
+      <>
+        <NavSmall />
+        <div className="recipe-filtered">
+          <div className="results">
+            <p className="search nexaLight">your search results for</p>
+            <p className="query playfair">{tag}</p>
+            <ResultCards data={data} />
+          </div>
         </div>
-      </div>
-      <FooterSmall />
-    </>
-  );
+        <FooterSmall />
+      </>
+    );
+  }
+  else {
+    return (
+      <>
+        <NavMobile />
+        <div className="recipe-filtered-mobile">
+          <div className="results">
+            <p className="search nexaLight">your search results for</p>
+            <p className="query playfair">{tag}</p>
+            <ResultCards data={data} />
+          </div>
+          <FooterSmall />
+        </div>
+      </>
+    );
+  }
 }
 
 export const pageQuery = graphql`
