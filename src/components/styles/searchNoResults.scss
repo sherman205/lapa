@@ -1,0 +1,17 @@
+@import '../../styles/colors.scss';
+
+.search-form{
+	display: flex;
+	justify-content: center;
+
+	.search-bar{
+		background: $white;
+		width: 200px;
+		border: 2px solid $black;
+		font-family: inherit;
+		outline: none;
+	}
+	.search-icon{
+		padding: 5px;
+	}
+}
