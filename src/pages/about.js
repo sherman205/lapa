@@ -18,13 +18,18 @@ export default class About extends Component {
   };
 
   componentWillMount = () => {
+    if (typeof window !== `undefined`) {
       window.addEventListener('resize', this.handleWindowSizeChange);
+    }
   }
   componentWillUnmount = () => {
+    if (typeof window !== `undefined`) {
       window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
   }
   handleWindowSizeChange = () => {
-      this.setState({ width: window.innerWidth });
+      const width = typeof window !== `undefined` ? window.innerWidth : null;
+      this.setState({ width: width });
   };
 
   render() {
