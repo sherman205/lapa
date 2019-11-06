@@ -11,24 +11,31 @@ export default class Recipes extends Component {
         super(props);
         const width = typeof window !== `undefined` ? window.innerWidth : null;
         this.state = {
-            width: width
+            width: width,
+            isLoaded: false
         };
     };
+
+    componentDidMount = () => {
+        this.setState({ isLoaded: true });
+    }
   
     componentWillMount = () => {
       if (typeof window !== `undefined`) {
         window.addEventListener('resize', this.handleWindowSizeChange);
       }
     }
+
     componentWillUnmount = () => {
       if (typeof window !== `undefined`) {
         window.removeEventListener('resize', this.handleWindowSizeChange);
       }
     }
+
     handleWindowSizeChange = () => {
         const width = typeof window !== `undefined` ? window.innerWidth : null;
         this.setState({ width: width });
-    };
+    }
 
     generateCard = (category) => {
         return (
@@ -43,50 +50,58 @@ export default class Recipes extends Component {
     }
 
     render() {
-        const { width } = this.state;
+        const { width, isLoaded } = this.state;
         const { data } = this.props;
         const isMobile = width <= 650;
         const categories = ["breakfast", "appetizers", "salad", "soup", "entrees", "heirloom", "drinks", "dessert"];
-        if (!isMobile) {
-            return (
-                <>
-                    <Root metadata={data.metadata.siteMetadata} />
-                    <NavSmall />
-                    <div className="recipe-categories">
-                        <div className="categories-intro playfair">
-                            <div>What are you craving?</div>
-                        </div>
-                        <div className="categories">
-                            {categories.map((category) => (
-                                <div className="card" key={category}>
-                                    {this.generateCard(category)}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <FooterSmall />
-                </>
-            );
-        }
-        else {
-            return (
-                <>
-                    <Root metadata={data.metadata.siteMetadata} />
-                    <NavMobile />
-                    <div className="recipe-categories-mobile">
-                        <div className="categories-intro playfair">
-                            <div>What are you craving?</div>
-                        </div>
-                        <div className="categories">
-                            {categories.map((category) => (
-                                <div className="card" key={category}>
-                                    {generateCard(category)}
-                                </div>
-                            ))}
+
+        if (isLoaded) {
+            if (!isMobile) {
+                return (
+                    <>
+                        <Root metadata={data.metadata.siteMetadata} />
+                        <NavSmall />
+                        <div className="recipe-categories">
+                            <div className="categories-intro playfair">
+                                <div>What are you craving?</div>
+                            </div>
+                            <div className="categories">
+                                {categories.map((category) => (
+                                    <div className="card" key={category}>
+                                        {this.generateCard(category)}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                         <FooterSmall />
-                    </div>
-                </>
+                    </>
+                );
+            }
+            else {
+                return (
+                    <>
+                        <Root metadata={data.metadata.siteMetadata} />
+                        <NavMobile />
+                        <div className="recipe-categories-mobile">
+                            <div className="categories-intro playfair">
+                                <div>What are you craving?</div>
+                            </div>
+                            <div className="categories">
+                                {categories.map((category) => (
+                                    <div className="card" key={category}>
+                                        {generateCard(category)}
+                                    </div>
+                                ))}
+                            </div>
+                            <FooterSmall />
+                        </div>
+                    </>
+                );
+            }
+        }
+        else {
+            return(
+              <p>Loading...</p>
             );
         }
     }

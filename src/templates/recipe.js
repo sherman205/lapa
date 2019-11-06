@@ -11,27 +11,34 @@ export default class Recipe extends Component {
     super(props);
     const width = typeof window !== `undefined` ? window.innerWidth : null;
     this.state = {
-        width: width
+        width: width,
+        isLoaded: false
     };
   };
+
+  componentDidMount = () => {
+    this.setState({ isLoaded: true });
+  }
 
   componentWillMount = () => {
     if (typeof window !== `undefined`) {
       window.addEventListener('resize', this.handleWindowSizeChange);
     }
   }
+
   componentWillUnmount = () => {
     if (typeof window !== `undefined`) {
       window.removeEventListener('resize', this.handleWindowSizeChange);
     }
   }
+
   handleWindowSizeChange = () => {
       const width = typeof window !== `undefined` ? window.innerWidth : null;
       this.setState({ width: width });
-  };
+  }
 
   render() {
-    const { width } = this.state;
+    const { width, isLoaded } = this.state;
     const { data } = this.props;
     const { markdownRemark } = data
     const { title, date, servingSize, totalTime, ingredients, instructions } = markdownRemark.frontmatter;
@@ -39,74 +46,81 @@ export default class Recipe extends Component {
     const img = markdownRemark.frontmatter.recipeImage.childImageSharp.fluid;
     const isMobile = width <= 650;
 
-    if (!isMobile) {
-      return (
-        <div className="recipe">
-          <div className="recipe-left">
-            <NavSmall />
-            <div className="recipe-content">
-              <p className="title playfair">{title}</p>
-              <div className="date nexaLight">{date}</div>
-              <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
-              <div start="md" className="recipe-info">
-                <div className="pre-recipe-info">Serving Size: {servingSize}</div>
-                <div className="pre-recipe-info">Total Time: {totalTime}</div>
-                <br></br>
-                <div className="recipe-ingredients">
+    if (isLoaded) {
+      if (!isMobile) {
+        return (
+          <div className="recipe">
+            <div className="recipe-left">
+              <NavSmall />
+              <div className="recipe-content">
+                <p className="title playfair">{title}</p>
+                <div className="date nexaLight">{date}</div>
+                <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+                <div start="md" className="recipe-info">
+                  <div className="pre-recipe-info">Serving Size: {servingSize}</div>
+                  <div className="pre-recipe-info">Total Time: {totalTime}</div>
+                  <br></br>
+                  <div className="recipe-ingredients">
+                    <span className="info-title playfair">Ingredients</span>
+                    <ul>
+                      {ingredients && ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
+                    </ul>
+                  </div>
+                  <div className="recipe-instructions">
+                    <span className="info-title playfair">Instructions</span>
+                    <ol>
+                      {instructions && instructions.map((instruction, i) => <li key={i}>{i+1}. {instruction}</li>)}
+                    </ol>
+                  </div>
+                </div>
+                <div className="content tag-us">
+                  Did you try out this recipe? Tag @lapa.eats on Instagram
+                </div>
+              </div>
+              <FooterSmall />
+            </div>
+            <div className="recipe-right">
+              <Img fluid={img} alt="{title}" />
+            </div>
+          </div>
+        );
+      }
+      else {
+        return (
+          <>
+            <NavMobile />
+            <div className="recipe-mobile">
+              <div className="recipe-preview-mobile">
+                <Img className="image-1x1" fluid={img} alt="{title}" />
+                <p className="title playfair">{title}</p>
+                <div className="date nexaLight">{date}</div>
+                <div className="content" dangerouslySetInnerHTML={{ __html: html }}  />
+                <div className="recipe-info">
+                  <div className="pre-recipe-info">Serving Size: {servingSize}</div>
+                  <div className="pre-recipe-info">Total Time: {totalTime}</div>
+                  <br></br>
                   <span className="info-title playfair">Ingredients</span>
                   <ul>
                     {ingredients && ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
                   </ul>
-                </div>
-                <div className="recipe-instructions">
                   <span className="info-title playfair">Instructions</span>
                   <ol>
                     {instructions && instructions.map((instruction, i) => <li key={i}>{i+1}. {instruction}</li>)}
                   </ol>
                 </div>
+                <div className="tag-us">
+                  Did you try out this recipe? Tag @lapa.eats on Instagram
               </div>
-              <div className="content tag-us">
-                Did you try out this recipe? Tag @lapa.eats on Instagram
               </div>
+              <FooterSmall />
             </div>
-            <FooterSmall />
-          </div>
-          <div className="recipe-right">
-            <Img fluid={img} alt="{title}" />
-          </div>
-        </div>
-      );
+          </>
+        );
+      }
     }
     else {
-      return (
-        <>
-          <NavMobile />
-          <div className="recipe-mobile">
-            <div className="recipe-preview-mobile">
-              <Img className="image-1x1" fluid={img} alt="{title}" />
-              <p className="title playfair">{title}</p>
-              <div className="date nexaLight">{date}</div>
-              <div className="content" dangerouslySetInnerHTML={{ __html: html }}  />
-              <div className="recipe-info">
-                <div className="pre-recipe-info">Serving Size: {servingSize}</div>
-                <div className="pre-recipe-info">Total Time: {totalTime}</div>
-                <br></br>
-                <span className="info-title playfair">Ingredients</span>
-                <ul>
-                  {ingredients && ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
-                </ul>
-                <span className="info-title playfair">Instructions</span>
-                <ol>
-                  {instructions && instructions.map((instruction, i) => <li key={i}>{i+1}. {instruction}</li>)}
-                </ol>
-              </div>
-              <div className="tag-us">
-                Did you try out this recipe? Tag @lapa.eats on Instagram
-            </div>
-            </div>
-            <FooterSmall />
-          </div>
-        </>
+      return(
+        <p>Loading...</p>
       );
     }
   }

@@ -6,14 +6,20 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import './styles/search.scss';
 
 export default class Search extends Component {
-    state = {
-        searchString: "",
-        visible: 'hide',
-    }
+	constructor(props) {
+		super(props);
+		const width = typeof window !== `undefined` ? window.innerWidth : null;
+		this.state = {
+			searchString: "",
+        	visible: 'hide',
+			width: width
+		};
+	};
 
 	componentDidMount() {
 		document.addEventListener("keydown", this.escFunction, false);
 	}
+
 	componentWillUnmount() {
 		document.removeEventListener("keydown", this.escFunction, false);
 	}
@@ -41,7 +47,10 @@ export default class Search extends Component {
 			this.setState({
 				visible: 'show'
 			}); 
-            document.body.classList.add("noScroll");
+			document.body.classList.add("noScroll");
+			if (this.state.width > 650){
+				this.refs.search.focus();
+			}
 		}
 	}
 

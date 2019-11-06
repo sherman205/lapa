@@ -11,61 +11,75 @@ export default class Category extends Component {
     super(props);
     const width = typeof window !== `undefined` ? window.innerWidth : null;
     this.state = {
-        width: width
+        width: width,
+        isLoaded: false
     };
   };
+
+  componentDidMount = () => {
+    this.setState({ isLoaded: true });
+  }
 
   componentWillMount = () => {
     if (typeof window !== `undefined`) {
       window.addEventListener('resize', this.handleWindowSizeChange);
     }
   }
+
   componentWillUnmount = () => {
     if (typeof window !== `undefined`) {
       window.removeEventListener('resize', this.handleWindowSizeChange);
     }
   }
+
   handleWindowSizeChange = () => {
       const width = typeof window !== `undefined` ? window.innerWidth : null;
       this.setState({ width: width });
-  };
+  }
 
 	render() {
-    const { width } = this.state;
+    const { width, isLoaded } = this.state;
     const { data, pageContext } = this.props;
     const { tag } = pageContext;
-		const isMobile = width <= 650;
-		if (!isMobile) {
-			return (
-        <>
-          <NavSmall />
-          <div className="recipe-filtered">
-            <div className="results">
-              <p className="search nexaLight">your search results for</p>
-              <p className="query playfair">{tag}</p>
-              <ResultCards data={data} />
-            </div>
-          </div>
-          <FooterSmall />
-        </>
-      );
-		}
-		else {
-			return (
-        <>
-          <NavMobile />
-          <div className="recipe-filtered-mobile">
-            <div className="results">
-              <p className="search nexaLight">your search results for</p>
-              <p className="query playfair">{tag}</p>
-              <ResultCards data={data} />
+    const isMobile = width <= 650;
+    
+    if (isLoaded) {
+      if (!isMobile) {
+        return (
+          <>
+            <NavSmall />
+            <div className="recipe-filtered">
+              <div className="results">
+                <p className="search nexaLight">your search results for</p>
+                <p className="query playfair">{tag}</p>
+                <ResultCards data={data} />
+              </div>
             </div>
             <FooterSmall />
-          </div>
-        </>
+          </>
+        );
+      }
+      else {
+        return (
+          <>
+            <NavMobile />
+            <div className="recipe-filtered-mobile">
+              <div className="results">
+                <p className="search nexaLight">your search results for</p>
+                <p className="query playfair">{tag}</p>
+                <ResultCards data={data} />
+              </div>
+              <FooterSmall />
+            </div>
+          </>
+        );
+      }
+    }
+    else {
+      return(
+        <p>Loading...</p>
       );
-		}
-
+    }
 	}
 }
 

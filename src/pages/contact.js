@@ -48,6 +48,7 @@ export default class Contact extends Component {
         const width = typeof window !== `undefined` ? window.innerWidth : null;
         this.state = {
             width: width,
+            isLoaded: false,
             // title: '',
             // contact_text: '',
             // name: '',
@@ -59,20 +60,26 @@ export default class Contact extends Component {
         };
     };
 
+    componentDidMount = () => {
+        this.setState({ isLoaded: true });
+    }
+
     componentWillMount = () => {
         if (typeof window !== `undefined`) {
           window.addEventListener('resize', this.handleWindowSizeChange);
         }
-      }
-      componentWillUnmount = () => {
+    }
+
+    componentWillUnmount = () => {
         if (typeof window !== `undefined`) {
           window.removeEventListener('resize', this.handleWindowSizeChange);
         }
-      }
-      handleWindowSizeChange = () => {
+    }
+
+    handleWindowSizeChange = () => {
           const width = typeof window !== `undefined` ? window.innerWidth : null;
           this.setState({ width: width });
-      };
+    }
 
     // handleChange = (e) => {
     //     this.setState({[e.target.name]: e.target.value})
@@ -137,7 +144,7 @@ export default class Contact extends Component {
     // }
 
     render() {
-        const { width } = this.state;
+        const { width, isLoaded } = this.state;
         const isMobile = width <= 650;
 
         // let validation = this.state.validation;
@@ -146,92 +153,98 @@ export default class Contact extends Component {
         Reach out if you want to chat about food photography (or photography in general), recipe development, sponsored posts, 
         or website development. We look forward to connecting with you soon!</p>`
 
-        if (!isMobile) {
-            return (
-                <>
-                    <NavSmall />
-                    <div className="contact">
-                        <div className="contact-left">
-                            <div className="contact-content">
-                                <p className="title playfair">Contact Us</p>
-                                <div className="content" dangerouslySetInnerHTML={{ __html: contact_info }} />
-                                <div className="contact-social-media">
-                                    <div className="fb-icon">
-                                        <a href="https://www.facebook.com/lapa.eats" target="_blank" rel="noopener noreferrer">
-                                            <FontAwesomeIcon icon={faFacebookF} />
-                                            <span className="fb">lapa.eats</span>
-                                        </a>
-                                    </div>
-                                    <div className="ig-icon">
-                                        <a href="https://www.instagram.com/lapa.eats" target="_blank" rel="noopener noreferrer">
-                                            <FontAwesomeIcon icon={faInstagram} />
-                                            <span className="ig">lapa.eats</span>
-                                        </a>
-                                    </div>
-                                    <div className="pin-icon">
-                                        <a href="https://www.pinterest.com/lapaeats" target="_blank" rel="noopener noreferrer">
-                                            <FontAwesomeIcon icon={faPinterestP} />
-                                            <span className="pin">lapaeats</span>
-                                        </a>
+        if (isLoaded) {
+            if (!isMobile) {
+                return (
+                    <>
+                        <NavSmall />
+                        <div className="contact">
+                            <div className="contact-left">
+                                <div className="contact-content">
+                                    <p className="title playfair">Contact Us</p>
+                                    <div className="content" dangerouslySetInnerHTML={{ __html: contact_info }} />
+                                    <div className="contact-social-media">
+                                        <div className="fb-icon">
+                                            <a href="https://www.facebook.com/lapa.eats" target="_blank" rel="noopener noreferrer">
+                                                <FontAwesomeIcon icon={faFacebookF} />
+                                                <span className="fb">lapa.eats</span>
+                                            </a>
+                                        </div>
+                                        <div className="ig-icon">
+                                            <a href="https://www.instagram.com/lapa.eats" target="_blank" rel="noopener noreferrer">
+                                                <FontAwesomeIcon icon={faInstagram} />
+                                                <span className="ig">lapa.eats</span>
+                                            </a>
+                                        </div>
+                                        <div className="pin-icon">
+                                            <a href="https://www.pinterest.com/lapaeats" target="_blank" rel="noopener noreferrer">
+                                                <FontAwesomeIcon icon={faPinterestP} />
+                                                <span className="pin">lapaeats</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="contact-right">
-                            <form>
-                                <p>Your Email</p>
-                                <input type="text" name="email" />
-                                {/* <span className="help-block">{validation.email.message}</span> */}
-                                <p>Your Name</p>
-                                <input type="text" name="name" />
-                                {/* <span className="help-block">{validation.name.message}</span> */}
-                                <p>Subject</p>
-                                <input type="text" name="subject" />
-                                {/* <span className="help-block">{validation.subject.message}</span> */}
-                                <p>Message</p>
-                                <textarea name="message" />
-                                {/* <span className="help-block help-message">{validation.message.message}</span> */}
-                                <button type="submit" className="primary">Submit</button>
-                                {/* <span className="form-submit-success">{this.state.result}</span> */}
-                            </form>
-                        </div>
-                    </div>
-                    <FooterSmall />
-                </>
-            );
-        }
-        else {
-            return (
-                <>
-                    <NavMobile />
-                    <div className="mobile-contact">
-                        <div className="contact-content">
-                            <p className="header playfair">Contact Us</p>
-                            <div className="content" dangerouslySetInnerHTML={{ __html: contact_info }} />
-                        </div>
-                        <div className="mobile-contact-form">
-                            <form>
-                                <p>Your Email</p>
-                                <input type="text" name="email" />
-                                {/* <span className="help-block">{validation.email.message}</span> */}
-                                <p>Your Name</p>
-                                <input type="text" name="name" />
-                                {/* <span className="help-block">{validation.name.message}</span> */}
-                                <p>Subject</p>
-                                <input type="text" name="subject" />
-                                {/* <span className="help-block">{validation.subject.message}</span> */}
-                                <p>Message</p>
-                                <textarea name="message" />
-                                {/* <span className="help-block help-message">{validation.message.message}</span> */}
-                                <button type="submit" className="primary">Submit</button>
-                                {/* <span className="form-submit-success">{this.state.result}</span> */}
-                            </form>
+                            <div className="contact-right">
+                                <form>
+                                    <p>Your Email</p>
+                                    <input type="text" name="email" />
+                                    {/* <span className="help-block">{validation.email.message}</span> */}
+                                    <p>Your Name</p>
+                                    <input type="text" name="name" />
+                                    {/* <span className="help-block">{validation.name.message}</span> */}
+                                    <p>Subject</p>
+                                    <input type="text" name="subject" />
+                                    {/* <span className="help-block">{validation.subject.message}</span> */}
+                                    <p>Message</p>
+                                    <textarea name="message" />
+                                    {/* <span className="help-block help-message">{validation.message.message}</span> */}
+                                    <button type="submit" className="primary">Submit</button>
+                                    {/* <span className="form-submit-success">{this.state.result}</span> */}
+                                </form>
+                            </div>
                         </div>
                         <FooterSmall />
-                    </div>
-                </>
+                    </>
+                );
+            }
+            else {
+                return (
+                    <>
+                        <NavMobile />
+                        <div className="mobile-contact">
+                            <div className="contact-content">
+                                <p className="header playfair">Contact Us</p>
+                                <div className="content" dangerouslySetInnerHTML={{ __html: contact_info }} />
+                            </div>
+                            <div className="mobile-contact-form">
+                                <form>
+                                    <p>Your Email</p>
+                                    <input type="text" name="email" />
+                                    {/* <span className="help-block">{validation.email.message}</span> */}
+                                    <p>Your Name</p>
+                                    <input type="text" name="name" />
+                                    {/* <span className="help-block">{validation.name.message}</span> */}
+                                    <p>Subject</p>
+                                    <input type="text" name="subject" />
+                                    {/* <span className="help-block">{validation.subject.message}</span> */}
+                                    <p>Message</p>
+                                    <textarea name="message" />
+                                    {/* <span className="help-block help-message">{validation.message.message}</span> */}
+                                    <button type="submit" className="primary">Submit</button>
+                                    {/* <span className="form-submit-success">{this.state.result}</span> */}
+                                </form>
+                            </div>
+                            <FooterSmall />
+                        </div>
+                    </>
+                );
+            }
+        }
+        else {
+            return(
+              <p>Loading...</p>
             );
         }
-
     }
 }

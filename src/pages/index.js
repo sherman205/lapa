@@ -29,15 +29,17 @@ export default class Index extends Component {
       window.addEventListener('resize', this.handleWindowSizeChange);
     }
   }
+
   componentWillUnmount = () => {
     if (typeof window !== `undefined`) {
       window.removeEventListener('resize', this.handleWindowSizeChange);
     }
   }
+
   handleWindowSizeChange = () => {
       const width = typeof window !== `undefined` ? window.innerWidth : null;
       this.setState({ width: width });
-  };
+  }
 
   render() {
     const { width, isLoaded } = this.state;

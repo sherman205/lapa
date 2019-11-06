@@ -12,32 +12,40 @@ export default class About extends Component {
       super(props);
       const width = typeof window !== `undefined` ? window.innerWidth : null;
       this.state = {
-          width: width
+          width: width,
+          isLoaded: false
       };
   };
+
+  componentDidMount = () => {
+    this.setState({ isLoaded: true });
+  }
 
   componentWillMount = () => {
     if (typeof window !== `undefined`) {
       window.addEventListener('resize', this.handleWindowSizeChange);
     }
   }
+
   componentWillUnmount = () => {
     if (typeof window !== `undefined`) {
       window.removeEventListener('resize', this.handleWindowSizeChange);
     }
   }
+
   handleWindowSizeChange = () => {
       const width = typeof window !== `undefined` ? window.innerWidth : null;
       this.setState({ width: width });
-  };
+  }
 
   render() {
-      const { width } = this.state;
-      const { data } = this.props;
-      const { title, intro } = (data.about.edges)[0].node.frontmatter;
-      const img = (data.about.edges)[0].node.frontmatter.featuredImage.childImageSharp.fluid;
-      const isMobile = width <= 650;
+    const { width, isLoaded } = this.state;
+    const { data } = this.props;
+    const { title, intro } = (data.about.edges)[0].node.frontmatter;
+    const img = (data.about.edges)[0].node.frontmatter.featuredImage.childImageSharp.fluid;
+    const isMobile = width <= 650;
 
+    if (isLoaded) {
       if (!isMobile) {
         return (
           <>
@@ -75,6 +83,12 @@ export default class About extends Component {
           </>
         );
       }
+    }
+    else {
+      return(
+        <p>Loading...</p>
+      );
+    }
   }
 }
 

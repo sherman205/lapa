@@ -23,7 +23,7 @@ Why ‘Lapa’, you ask? The word comes from an old Slavic root that means ‘to
 
 <h3>The Site And Beyond</h3>
 
-You can think of the content here as being *written by Sophia and illustrated by Ryan* Sort of like a physical cookbook! But like all of our recipes, this website is, too, homemade. If you’re interested in our tech stack or have questions about web design, feel free to contact us! 
+You can think of the content here as being *written by Sophia and illustrated by Ryan*, sort of like a physical cookbook! But like all of our recipes, this website is, too, homemade. If you’re interested in our tech stack or have questions about web design, feel free to contact us! 
 
 For more information and to start the conversation, write to us at lapa.eats@gmail.com or visit our Contact page. 
 
