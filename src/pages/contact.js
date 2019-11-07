@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavSmall from '../components/navSmall';
 import NavMobile from '../components/navMobile';
 import FooterSmall from '../components/footerSmall';
-import FormValidator from '../validators/FormValidator';
+import FormValidator from '../validators/formValidator';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
