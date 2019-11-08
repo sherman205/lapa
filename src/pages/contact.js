@@ -94,12 +94,19 @@ export default class Contact extends Component {
     handleSubmit = (e) => {
         const validation = this.validator.validate(this.state);
         this.setState({ validation });
+
+        const payload = {
+            name: this.state.name,
+            email: this.state.email,
+            subject: this.state.subject,
+            message: this.state.message
+        };
     
         if (validation.isValid) {
             fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact", ...this.state })
+                body: encode({ "form-name": "contact", ...payload })
             })
             .then(response => {
                 this.setState({
