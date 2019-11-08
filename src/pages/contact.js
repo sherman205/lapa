@@ -165,7 +165,7 @@ export default class Contact extends Component {
                                 </div>
                             </div>
                             <div className="contact-right">
-                                <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+                                <form name="contact" method="post" action="/about" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
                                     <input type="hidden" name="form-name" value="contact" />
                                     <p>Your Email</p>
                                     <input type="email" value={email} name="email" onChange={this.handleChange}/>
@@ -198,7 +198,7 @@ export default class Contact extends Component {
                                 <div className="content" dangerouslySetInnerHTML={{ __html: contact_info }} />
                             </div>
                             <div className="mobile-contact-form">
-                                <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+                                <form name="contact" method="post" action="/about" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
                                     <input type="hidden" name="form-name" value="contact" />
                                     <p>Your Email</p>
                                     <input type="email" value={email} name="email" onChange={this.handleChange}/>
