@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { graphql } from "gatsby";
 import Root from '../components/root';
 import NavSmall from '../components/navSmall';
@@ -11,11 +12,6 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faPinterestP } from '@fortawesome/free-brands-svg-icons'
 import '../styles/contact.scss';
 
-const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-}
 
 export default class Contact extends Component {
     constructor(props) {
@@ -59,6 +55,7 @@ export default class Contact extends Component {
             width: width,
             isLoaded: false,
             validation: this.validator.valid(),
+            result: '',
             name: '',
             email: '',
             subject: '',
@@ -101,25 +98,31 @@ export default class Contact extends Component {
             subject: this.state.subject,
             message: this.state.message
         };
-    
+
+        e.preventDefault();
         if (validation.isValid) {
-            fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact", ...payload })
+            axios({
+                method: 'POST',
+                url: 'https://formspree.io/mvooggnn',
+                data: { ...payload}
             })
             .then(response => {
                 this.setState({
                     name: "",
                     email: "",
                     subject: "",
-                    message: ""
+                    message: "",
+                    result: "Success! Message sent."
                 });
                 console.log('Success!', response);
             })
-            .catch(error => alert(error));            
+            .catch(error => {
+                this.setState({
+                    result: "Oops -- an error occured"
+                });
+                console.log('An error occurred', error);
+            });
         }
-        e.preventDefault();
     }
 
     render() {
@@ -165,10 +168,10 @@ export default class Contact extends Component {
                                 </div>
                             </div>
                             <div className="contact-right">
-                                <form name="contact" method="post" action="/about" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+                                <form name="contact" onSubmit={this.handleSubmit}>
                                     <input type="hidden" name="form-name" value="contact" />
                                     <p>Your Email</p>
-                                    <input type="email" value={email} name="email" onChange={this.handleChange}/>
+                                    <input type="_replyto" value={email} name="email" onChange={this.handleChange}/>
                                     <span className="help-block">{validation.email.message}</span>
                                     <p>Your Name</p>
                                     <input type="text" value={name} name="name" onChange={this.handleChange}/>
@@ -180,6 +183,7 @@ export default class Contact extends Component {
                                     <textarea value={message} name="message" onChange={this.handleChange}/>
                                     <span className="help-block help-message">{validation.message.message}</span>
                                     <button type="submit" className="primary">Submit</button>
+                                    <span className="form-submit-success">{this.state.result}</span>
                                 </form>
                             </div>
                         </div>
@@ -198,10 +202,10 @@ export default class Contact extends Component {
                                 <div className="content" dangerouslySetInnerHTML={{ __html: contact_info }} />
                             </div>
                             <div className="mobile-contact-form">
-                                <form name="contact" method="post" action="/about" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+                                <form name="contact" onSubmit={this.handleSubmit}>
                                     <input type="hidden" name="form-name" value="contact" />
                                     <p>Your Email</p>
-                                    <input type="email" value={email} name="email" onChange={this.handleChange}/>
+                                    <input type="_replyto" value={email} name="email" onChange={this.handleChange}/>
                                     <span className="help-block">{validation.email.message}</span>
                                     <p>Your Name</p>
                                     <input type="text" value={name} name="name" onChange={this.handleChange}/>
@@ -213,6 +217,7 @@ export default class Contact extends Component {
                                     <textarea value={message} name="message" onChange={this.handleChange}/>
                                     <span className="help-block help-message">{validation.message.message}</span>
                                     <button type="submit" className="primary">Submit</button>
+                                    <span className="form-submit-success">{this.state.result}</span>
                                 </form>
                             </div>
                             <FooterSmall />
