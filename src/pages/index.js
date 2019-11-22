@@ -61,7 +61,7 @@ export default class Index extends Component {
               </div>
               <div className="recipe-row">
                 {
-                  data.recipes.edges.map(edge => {
+                  data.recipes.edges.slice(0, 6).map(edge => {
                     return (
                       <div className="item" key={edge.node.fields.slug}>
                         <RecipePreview node={edge.node} />
@@ -82,7 +82,7 @@ export default class Index extends Component {
             <NavMobile />
             <div className="mobile-home">
               <MobileSplash />
-              {data.recipes.edges.map(edge => (
+              {data.recipes.edges.slice(0, 6).map(edge => (
                 <div className="recipe-row item" key={edge.node.fields.slug}>
                   <RecipePreview node={edge.node} />
                 </div>

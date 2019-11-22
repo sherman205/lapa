@@ -6,7 +6,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const recipeTemplate = path.resolve(`${__dirname}/src/templates/recipe.js`);
   const tagTemplate = path.resolve(`${__dirname}/src/templates/category.js`);
-
   const result = await graphql(`
     {
       recipesRemark: allMarkdownRemark(
