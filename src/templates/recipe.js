@@ -135,13 +135,35 @@ export default class Recipe extends Component {
                   <div className="pre-recipe-info">Total Time: {totalTime}</div>
                   <br></br>
                   <span className="info-title playfair">Ingredients</span>
+                  {list_1 && (
+                    <h4>{list_1}</h4>
+                  )}
                   <ul>
                     {ingredients && ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
                   </ul>
+                  {list_2 && (
+                    <h4>{list_2}</h4>
+                  )}
+                  {ingredients_list_2 && (
+                    <ul>
+                      {ingredients_list_2 && ingredients_list_2.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
+                    </ul>
+                  )}
                   <span className="info-title playfair">Instructions</span>
+                  {instructions_list_2 && (
+                    <h4>{list_1}</h4>
+                  )}
                   <ol>
                     {instructions && instructions.map((instruction, i) => <li key={i}>{i+1}. {instruction}</li>)}
                   </ol>
+                  {instructions_list_2 && (
+                    <h4>{list_2}</h4>
+                  )}
+                  {instructions_list_2 && (
+                    <ol>
+                      {instructions_list_2 && instructions_list_2.map((instruction, i) => <li key={i}>{instruction}</li>)}
+                    </ol>
+                  )}
                 </div>
                 <div className="tag-us">
                   Did you try out this recipe? Tag @lapa.eats on Instagram
