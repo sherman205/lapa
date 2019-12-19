@@ -7,22 +7,15 @@ recipeImage: ./apple_black_currant_pie_3x4.jpg
 description: "A tart apple pie but with the colorful punch and flavor of black currants!"
 servingSize: "One 9 inch pie"
 totalTime: "75 minutes"
+list_1: "Pie dough"
+list_2: "Pie filling"
 ingredients:
-    - Pie dough
     - 2 ⅔ cup flour
     - ¾ cup butter, room temperature and cubed
     - 2 tablespoons confectioner’s sugar
     - ¼ cup cold water
     - 1 egg yolk
     - Pinch of salt
-    - Pie filling
-    - 3 large tart apples
-    - 1 cup frozen black currants
-    - ⅓ cup sugar
-    - 2 tablespoons flour
-    - 1 teaspoon ground cinnamon
-    - 1 teaspoon lemon zest
-    - 1 tablespoon butter
 instructions:
     - Use an electric mixer to combine the flour, salt, and butter until the mixture is crumb-like in appearance.
     - Add the confectioner's sugar and continue mixing. 
@@ -31,6 +24,15 @@ instructions:
     - Cover with plastic wrap and refrigerate for 1 hour. 
     - Roll the pastry ball out on a lightly floured work surface to about a ¼ inch thick. 
     - Line a 9 inch pie pan with the rolled out pie dough, leaving any excess pastry hanging over the edge.
+ingredients_list_2:
+    - 3 large tart apples
+    - 1 cup frozen black currants
+    - ⅓ cup sugar
+    - 2 tablespoons flour
+    - 1 teaspoon ground cinnamon
+    - 1 teaspoon lemon zest
+    - 1 tablespoon butter
+instructions_list_2:
     - Peel, core, and chop the apples. Place them into a medium bowl.
     - Add the black currants, sugar, flour, cinnamon, and lemon zest and toss to coat.
     - Spread the filling into the prepared pie pan and drop pieces of butter on top of the filling. This will give the filling a richer flavor.
@@ -38,8 +40,7 @@ instructions:
     - Roll the remaining dough out to a ¼ inch thick again to decorate the top of the pie with a lattice or any other pattern you prefer.
     - Preheat the oven to 400 degrees.
     - Beat an egg in a small bowl and brush over the pastry.
-    - Bake for 40 - 45 minutes, or until pastry is golden brown and the filling is cooked.
-    - Serve warm!
+    - Bake for 40 - 45 minutes, or until pastry is golden brown and the filling is cooked. Serve warm!
 ---
 This pie was definitely one of my experiments in the kitchen. Not only had I never made my own homemade pie before, I was experimenting with the flavors again. And this was quite an enjoyable surprise!
 

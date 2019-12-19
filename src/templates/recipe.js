@@ -40,8 +40,18 @@ export default class Recipe extends Component {
   render() {
     const { width, isLoaded } = this.state;
     const { data } = this.props;
-    const { markdownRemark } = data
-    const { title, date, servingSize, totalTime, ingredients, instructions } = markdownRemark.frontmatter;
+    const { markdownRemark } = data;
+    const { title,
+            date,
+            servingSize,
+            totalTime,
+            list_1,
+            list_2,
+            ingredients,
+            instructions,
+            ingredients_list_2,
+            instructions_list_2 
+          } = markdownRemark.frontmatter;
     const html = markdownRemark.html;
     const img = markdownRemark.frontmatter.recipeImage.childImageSharp.fluid;
     const isMobile = width <= 650;
@@ -62,15 +72,37 @@ export default class Recipe extends Component {
                   <br></br>
                   <div className="recipe-ingredients">
                     <span className="info-title playfair">Ingredients</span>
+                    {list_1 && (
+                      <h4>{list_1}</h4>
+                    )}
                     <ul>
                       {ingredients && ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
                     </ul>
+                    {list_2 && (
+                      <h4>{list_2}</h4>
+                    )}
+                    {ingredients_list_2 && (
+                      <ul>
+                        {ingredients_list_2 && ingredients_list_2.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
+                      </ul>
+                    )}
                   </div>
                   <div className="recipe-instructions">
                     <span className="info-title playfair">Instructions</span>
+                    {list_1 && (
+                      <h4>{list_1}</h4>
+                    )}
                     <ol>
                       {instructions && instructions.map((instruction, i) => <li key={i}>{i+1}. {instruction}</li>)}
                     </ol>
+                    {list_2 && (
+                      <h4>{list_2}</h4>
+                    )}
+                    {instructions_list_2 && (
+                      <ol>
+                        {instructions_list_2 && instructions_list_2.map((instruction, i) => <li key={i}>{instruction}</li>)}
+                      </ol>
+                    )}
                   </div>
                 </div>
                 <div className="content tag-us">
@@ -138,8 +170,12 @@ export const query = graphql`
         date
         servingSize
         totalTime
+        list_1
+        list_2
         ingredients
         instructions
+        ingredients_list_2
+        instructions_list_2
         recipeImage {
           childImageSharp {
             fluid {
