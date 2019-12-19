@@ -7,8 +7,9 @@ recipeImage: ./easy_greek_pita_pizzas_3x4.jpeg
 description: "Easy, cheesy customizable dinner for two. Need we say more?"
 servingSize: "2 personal pizzas"
 totalTime: "20  minutes"
+list_1: "Pesto Sausage Pizza"
+list_2: "Classic Veggie Pizza"
 ingredients:
-    - Pesto Sausage Pizza
     - 1 Greek pita (the flatbread kind without pockets)
     - ½ cup pesto sauce
     - ¼ cup white cheddar cheese, grated
@@ -17,7 +18,13 @@ ingredients:
     - A few slices of onion
     - Grated parmesan cheese, to top
     - Pinch of pepper
-
+instructions:
+    - Preheat the oven to 350 degrees F. Line a baking sheet with foil.
+    - Place the Greek pitas onto the baking sheet and spread the pesto sauce on one pita and the tomato sauce on the other pita.
+    - Cover the pitas with cheese, and then place the corresponding toppings on each of the pizzas. You can customize them, or use the examples above.
+    - Place in the oven for about 10-15 minutes, or until the cheese has melted and the toppings are cooked.
+    - Slice each of the pizzas into 4 slices, and enjoy!
+ingredients_list_2:
     - Classic Veggie Pizza
     - 1 Greek pita (the flatbread kind without pockets)
     - ½ cup tomato sauce
@@ -28,12 +35,6 @@ ingredients:
     - 5 or 6 olives, sliced
     - 1 basil leaf, thinly sliced
     - Pinch of pepper
-instructions:
-    - Preheat the oven to 350 degrees F. Line a baking sheet with foil.
-    - Place the Greek pitas onto the baking sheet and spread the pesto sauce on one pita and the tomato sauce on the other pita.
-    - Cover the pitas with cheese, and then place the corresponding toppings on each of the pizzas. You can customize them, or use the examples above.
-    - Place in the oven for about 10-15 minutes, or until the cheese has melted and the toppings are cooked.
-    - Slice each of the pizzas into 4 slices, and enjoy!
 ---
 Sometimes going through all that trouble of making pizza dough (or even using store-bought) is annoying. Basically using raw pizza dough would make this recipe take way longer than 20 minutes. And if you're in a hurry and craving pizza, this is super easy and quick to make, without sacrificing taste!
 

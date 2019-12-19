@@ -7,10 +7,9 @@ recipeImage: ./black_bean_avo_corn_salad_3x4.jpeg
 description: "A Southwestern style salad with a killer cayenne honey lime dressing."
 servingSize: "4 servings"
 totalTime: "15 minutes"
+list_1: "Salad"
+list_2: "Dressing"
 ingredients:
-    - 2 avocados, cubed
-    - 2 15-oz. cans of corn
-    - 2  15-oz. cans of black beans
     - 2 tablespoons red wine vinegar
     - 2 tablespoons fresh lime juice
     - 2 tablespoons honey
@@ -23,7 +22,11 @@ ingredients:
 instructions:
     - Whisk together the ingredients for the dressing in a bowl. 
     - Mix the corn, beans, and avocado in a large bowl.
-     - Add in as much dressing as desired. Serve immediately to prevent the avocado from turning brown and mushy.
+    - Add in as much dressing as desired. Serve immediately to prevent the avocado from turning brown and mushy.
+ingredients_list_2:
+    - 2 avocados, cubed
+    - 2 15-oz. cans of corn
+    - 2 15-oz. cans of black beans
 ---
 We love this salad, because it's simple to make and tastes absolutely amazing! With only 3 main ingredients, this takes only a few minutes to throw together. And the dressing is to die for, I could probably put it on anything. So if you happen to try this dressing on other salads, let us know how it goes!
 

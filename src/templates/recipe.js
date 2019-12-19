@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import NavSmall from '../components/navSmall';
 import NavMobile from '../components/navMobile';
 import FooterSmall from '../components/footerSmall';
+import Root from '../components/root';
 import './recipe.scss';
 
 export default class Recipe extends Component {
@@ -60,6 +61,7 @@ export default class Recipe extends Component {
       if (!isMobile) {
         return (
           <div className="recipe">
+            <Root metadata={data.metadata.siteMetadata} />
             <div className="recipe-left">
               <NavSmall />
               <div className="recipe-content">
@@ -89,13 +91,13 @@ export default class Recipe extends Component {
                   </div>
                   <div className="recipe-instructions">
                     <span className="info-title playfair">Instructions</span>
-                    {list_1 && (
+                    {instructions_list_2 && (
                       <h4>{list_1}</h4>
                     )}
                     <ol>
                       {instructions && instructions.map((instruction, i) => <li key={i}>{i+1}. {instruction}</li>)}
                     </ol>
-                    {list_2 && (
+                    {instructions_list_2 && (
                       <h4>{list_2}</h4>
                     )}
                     {instructions_list_2 && (
@@ -120,6 +122,7 @@ export default class Recipe extends Component {
       else {
         return (
           <>
+            <Root metadata={data.metadata.siteMetadata} />
             <NavMobile />
             <div className="recipe-mobile">
               <div className="recipe-preview-mobile">
@@ -185,5 +188,11 @@ export const query = graphql`
         }
       }
     }
-}
-`
+    metadata: site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;

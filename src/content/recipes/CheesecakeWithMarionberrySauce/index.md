@@ -7,6 +7,8 @@ recipeImage: ./marionberry_cheesecake_3x4.jpeg
 description: "A classic cheesecake smothered in the sweet and tart flavor of warm marionberry sauce."
 servingSize: "One 9 inch cheesecake"
 totalTime: "1 hour 30 minutes"
+list_1: "Cheesecake"
+list_2: "Marionberry Sauce"
 ingredients:
     - 1½ cups graham crackers, crumbled
     - 6 tablespoons unsalted butter, melted
@@ -18,13 +20,7 @@ ingredients:
     - 2 teaspoons vanilla extract
     - ½ teaspoon lemon zest
     - Salt to taste
-    - 1½ cups fresh marionberries
-    - ¼ cup sugar
-    - 1 teaspoon cornstarch
-    - 1 tablespoon lemon juice
-    - 1½  teaspoons lemon zest
 instructions:
-    - To make the marionberry sauce, bring the marionberries to a simmer at medium heat in a small saucepan. Add in the sugar, cornstarch, lemon juice and zest and cook until the mixture has thickened, about 10 minutes. Transfer the sauce to a blender and blend until smooth. Strain the sauce into a jar to remove all the seeds.
     - Preheat the oven to 350 degrees F. In a medium bowl, mix together the graham cracker crumbs and melted butter. Add in cinnamon and a pinch of salt and stir until combined.
     - Press the graham cracker mixture evenly into the bottom of a 9 inch springform pan.
     - Bake for about 10 minutes, and remove to cool, reducing the oven temperature to 325 degrees F.
@@ -36,6 +32,17 @@ instructions:
     - Let the cheesecake cool in its water bath for about 30 minutes, and then remove the springform pan from the roasting pan. Run a knife along the sides of the springform pan and place it in the fridge to cool completely.
     - After the cheesecake has cooled, remove it from its pan.
     - Serve a thick cheesecake slice with a healthy serving of warm marionberry sauce.
+ingredients_list_2:
+    - 1½ cups fresh marionberries
+    - ¼ cup sugar
+    - 1 teaspoon cornstarch
+    - 1 tablespoon lemon juice
+    - 1½  teaspoons lemon zest
+instructions_list_2:
+    - In a small saucepan, bring the marionberries to a simmer at medium heat.
+    - Add in all of the ingredients for the sauce and cook until the mixture has thickened, about 10 minutes.
+    - Transfer the sauce to a blender and blend until smooth.
+    - Strain the sauce into a jar to remove all the seeds.
 ---
 It was national cheesecake day a few days ago, and naturally we missed it. Do people just keep track of all the national food days and plan out which food they're going to make? That sounds both exhausting, yet easy at the same time.
 

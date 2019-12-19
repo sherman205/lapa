@@ -7,11 +7,23 @@ recipeImage: ./spinach_bacon_quiche_3x4.jpg
 description: "A cheesy and herbed quiche that packs all the main food groups into one pie."
 servingSize: "One 9 inch quiche"
 totalTime: "80 minutes"
+list_1: "Quiche dough"
+list_2: "Quiche filling"
 ingredients:
     - 2 cups flour
     - 1 teaspoon salt
     - ½ cup ice water
     - ½ cup olive oil
+instructions:
+    - In a bowl, mix together the flour and salt with a fork. 
+    - In a separate bowl, mix the olive oil and cold water together until it combines. Then pour the mixture into the flour. 
+    - Once the dough starts to come together, use your hands to form it into a ball. 
+    - Store in the fridge for a few hours so it is easier to roll out. 
+    - Preheat the oven to 400 degrees. 
+    - Roll out the dough to ¼” thick and form into the tart or pie pan. Trim away excess dough and store for later. 
+    - Place aluminum foil over the top of the dough and weigh down with something, i.e. uncooked rice, to imitate the weight of the filling.
+    - Bake tart shell until it is mostly cooked, for about 20 minutes, and then remove to cool.
+ingredients_list_2:
     - 2 cups spinach, chopped
     - ½ cup sundried tomato, chopped
     - ½ onion, cut into moon-shaped slices
@@ -23,16 +35,7 @@ ingredients:
     - ¼ teaspoon fresh nutmeg, grated
     - Salt to taste
     - Pepper to taste
-instructions:
-    - To make the quiche shell, mix together the flour and salt with a fork in a bowl. In a separate bowl, mix the olive oil and cold water together until it combines. Then pour the mixture into the flour. 
-    - Once the dough starts to come together, use your hands to form it into a ball. 
-    - Store in the fridge for a few hours so it is easier to roll out. 
-    - Preheat the oven to 400 degrees. 
-    - Roll out the dough to ¼” thick and form into the tart or pie pan. Trim away excess dough and store for later. 
-    - Place aluminum foil over the top of the dough and weigh down with something, i.e. uncooked rice, to imitate the weight of the filling.
-    - Bake tart shell until it is mostly cooked, for about 20 minutes, and then remove to cool.
-    - Reduce the oven temperature to 325 degrees. 
-    - Crisp up the 4 strips of bacon in a frying pan. Transfer to a plate covered in a paper towel to remove excess fat and cool. 
+instructions_list_2:
     - Remove some of the excess bacon fat, but leave some in the pan, because we are going to saute the onion and then the spinach in the same pan, using the flavor from the bacon. 
     - Add the onions and fry for a few minutes until they are slightly browned. Remove from the pan and set aside. 
     - Then throw in the spinach and saute until wilted. Remove from the pan once again. It is important to prepare all three of these ingredients in a frying pan separately, because they each have different cooking times. 
