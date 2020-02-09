@@ -60,7 +60,7 @@ export default class Recipes extends Component {
             appetizers: appsImg.childImageSharp.fluid,
             salad: saladImg.childImageSharp.fluid,
             soup: soupsImg.childImageSharp.fluid,
-            entrees: breakfastImg.childImageSharp.fluid,
+            entrees: entreesImg.childImageSharp.fluid,
             heirloom: heirloomImg.childImageSharp.fluid,
             drinks: drinksImg.childImageSharp.fluid,
             dessert: dessertsImg.childImageSharp.fluid,
