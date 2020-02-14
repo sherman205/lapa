@@ -1,7 +1,7 @@
 ---
 date: "2020-02-14"
 title: "Raspberry Lemon Scones"
-tags: ["dessert", "breakfast", "scones" "raspberry lemon scones", "raspberry scones", "berry desserts", "berry", "raspberry", "lemon"]
+tags: ["dessert", "breakfast", "scones", "raspberry lemon scones", "raspberry scones", "berry desserts", "berry", "raspberry", "lemon"]
 featuredImage: ./raspberry_lemon_scones_1x1.jpg
 recipeImage: ./raspberry_lemon_scones_3x4.jpg
 description: "Light and fluffy berry-filled scones will get you ready for spring or tea time or both!"
