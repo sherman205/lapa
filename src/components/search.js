@@ -11,7 +11,7 @@ export default class Search extends Component {
 		const width = typeof window !== `undefined` ? window.innerWidth : null;
 		this.state = {
 			searchString: "",
-        	visible: 'hide',
+      visible: 'hide',
 			width: width
 		};
 	};
@@ -68,12 +68,12 @@ export default class Search extends Component {
 	}
 
 	onSearch = (e) => {
-        e.preventDefault();
+		e.preventDefault();
+		document.body.style.overflow = "auto";
 		this.setState({
-			visible: 'hide'
-        });
-        document.body.style.overflow = "auto";
-        navigate(`/results/${this.state.searchString}`);
+			visible: 'hide',
+			searchString: this.state.searchString.replace(/\s+/g, '-')
+		}, () => navigate(`/results/${this.state.searchString}`));
 	}
 
 	render() {

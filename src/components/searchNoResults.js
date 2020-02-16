@@ -25,7 +25,9 @@ class SearchNoResults extends Component {
 	onSearch = (e) => {
 		e.preventDefault();
 		if (this.state.searchString !== "") {
-            navigate(`/results/${this.state.searchString}`);
+			this.setState({
+				searchString: this.state.searchString.replace(/\s+/g, '-')
+			}, () => navigate(`/results/${this.state.searchString}`));
 		}
 	}
 
