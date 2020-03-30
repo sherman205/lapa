@@ -106,7 +106,7 @@ export const query = graphql`
             intro
             featuredImage{
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                     }
                 }

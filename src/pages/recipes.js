@@ -128,56 +128,56 @@ export const pageQuery = graphql`
             title
             breakfastImg{
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                     }
                 }
             }
             appsImg{
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                     }
                 }
             }
             saladImg{
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                     }
                 }
             }
             soupsImg{
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                     }
                 }
             }
             entreesImg{
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                     }
                 }
             }
             heirloomImg{
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                     }
                 }
             }
             drinksImg{
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                     }
                 }
             }
             dessertsImg{
                 childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                     }
                 }

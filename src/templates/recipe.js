@@ -203,7 +203,7 @@ export const query = graphql`
         instructions_list_2
         recipeImage {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 2000, quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }
