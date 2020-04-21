@@ -26,6 +26,7 @@
 
             .content{
                 font-size: .8rem;
+                padding-bottom: 25px;
             }
 
             .recipe-info{
@@ -95,6 +96,9 @@
         }
         .date{
             padding-top: 10px;
+        }
+        .content {
+            padding-bottom: 25px;
         }
         .recipe-info{
             border: 1px solid $black;

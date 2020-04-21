@@ -74,13 +74,13 @@ export default class Recipe extends Component {
                   <br></br>
                   <div className="recipe-ingredients">
                     <span className="info-title playfair">Ingredients</span>
-                    {list_1 && (
+                    {ingredients_list_2 && (
                       <h4>{list_1}</h4>
                     )}
                     <ul>
                       {ingredients && ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
                     </ul>
-                    {list_2 && (
+                    {ingredients_list_2 && (
                       <h4>{list_2}</h4>
                     )}
                     {ingredients_list_2 && (
@@ -135,13 +135,13 @@ export default class Recipe extends Component {
                   <div className="pre-recipe-info">Total Time: {totalTime}</div>
                   <br></br>
                   <span className="info-title playfair">Ingredients</span>
-                  {list_1 && (
+                  {ingredients_list_2 && (
                     <h4>{list_1}</h4>
                   )}
                   <ul>
                     {ingredients && ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
                   </ul>
-                  {list_2 && (
+                  {ingredients_list_2 && (
                     <h4>{list_2}</h4>
                   )}
                   {ingredients_list_2 && (
