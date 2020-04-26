@@ -1,6 +1,5 @@
 @import '../styles/colors.scss';
 
-
 .recipe{
     display: flex;
     height: calc(100vh - 40px);
@@ -104,6 +103,10 @@
             border: 1px solid $black;
             font-size: .8rem;
             padding: 1rem;
+
+            h4{
+                font-size: 0.85rem;
+            }
 
             p{
                 margin: 0;

@@ -46,6 +46,11 @@
     text-transform: uppercase;
     color: $black;
   }
+  a.lapa-tag{
+    font-family: $OpenSans;
+    letter-spacing: 0px;
+    text-transform: none;
+  }
   .active{
     background: linear-gradient(to top,$purple,$purple 100%,transparent 100%,transparent);
     background-position: center 100%;

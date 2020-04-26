@@ -59,6 +59,9 @@ export default class Recipe extends Component {
 
     if (isLoaded) {
       if (!isMobile) {
+        console.log(instructions)
+        console.log(instructions_list_2);
+
         return (
           <div className="recipe">
             <Root metadata={data.metadata.siteMetadata} />
@@ -102,13 +105,15 @@ export default class Recipe extends Component {
                     )}
                     {instructions_list_2 && (
                       <ol>
-                        {instructions_list_2 && instructions_list_2.map((instruction, i) => <li key={i}>{instruction}</li>)}
+                        {instructions_list_2 && instructions_list_2.map((instruction, i) => <li key={i}>{i+1}. {instruction}</li>)}
                       </ol>
                     )}
                   </div>
                 </div>
                 <div className="content tag-us">
-                  Did you try out this recipe? Tag @lapa.eats on Instagram
+                  Did you try out this recipe? Tag 
+                    <a className="lapa-tag" href="https://www.instagram.com/lapa.eats" target="_blank" rel="noopener noreferrer"> @lapa.eats </a>
+                  on Instagram
                 </div>
               </div>
               <FooterSmall />
@@ -161,12 +166,14 @@ export default class Recipe extends Component {
                   )}
                   {instructions_list_2 && (
                     <ol>
-                      {instructions_list_2 && instructions_list_2.map((instruction, i) => <li key={i}>{instruction}</li>)}
+                      {instructions_list_2 && instructions_list_2.map((instruction, i) => <li key={i}>{i+1}. {instruction}</li>)}
                     </ol>
                   )}
                 </div>
                 <div className="tag-us">
-                  Did you try out this recipe? Tag @lapa.eats on Instagram
+                  Did you try out this recipe? Tag
+                    <a className="lapa-tag" href="https://www.instagram.com/lapa.eats" target="_blank" rel="noopener noreferrer"> @lapa.eats </a>
+                  on Instagram
               </div>
               </div>
               <FooterSmall />
