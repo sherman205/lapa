@@ -15,16 +15,16 @@ ingredients:
     - 1 egg
     - ½ cup walnuts, chopped (some of this will go towards the topping!)
     - ½ teaspoon ground cinnamon
-    - 1 teaspoon vanilla extract
+    - 1 teaspoon pure vanilla extract
     - ½ teaspoon baking powder
     - ¼ teaspoon baking soda
     - ⅓ cup buttermilk (or ⅓ cup milk + 2 teaspoons vinegar)
     - Pinch of cloves
-    - Salt to taste
+    - Sea salt, to taste
 instructions:
     - Preheat the oven to 400 degrees F. Prepare your muffin tin by lining each cup with muffin paper liner and spray each with cooking spray. 
     - In a large mixing bowl, whisk together honey and coconut oil. Then add in the egg and mix well. 
-    - Add the buttermilk (or substitute with milk + vinegar), as well as the baking soda, baking powder, vanilla, cinnamon, cloves, and salt. Whisk until combined. 
+    - Add the buttermilk (or substitute with milk + vinegar), as well as the baking soda, baking powder, vanilla extract, cinnamon, cloves, and salt. Whisk until combined. 
     - Before mixing in the grated zucchini, make sure you remove as much of the moisture as you can by squeezing it out in a towel. Then add in the zucchini to the bowl and mix with a wooden spoon.
     - Finally, add in the flour. The mixture should be slightly thicker and more like a batter. Fold in the chopped nuts, if desired. 
     - Pour the batter evenly into each of the 6 muffin cups. Top with more crumbled walnuts for a nice topping. 

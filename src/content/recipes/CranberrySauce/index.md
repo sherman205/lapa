@@ -14,7 +14,7 @@ ingredients:
     - ½ cup water
     - 1 cinnamon stick
     - 1 orange peel
-    - Pinch of salt
+    - Pinch of sea salt
 instructions:
     - Mix together sugar, water, and orange juice and a medium saucepan over medium heat.
     - Add cranberries, cinnamon stick, orange peel, and salt.

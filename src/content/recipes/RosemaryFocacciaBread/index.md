@@ -12,10 +12,10 @@ ingredients:
     - ⅔ cup warm water
     - ½ teaspoon honey
     - 2 teaspoons active dry yeast
-    - ½ teaspoon salt
+    - ½ teaspoon sea salt
     - 4 tablespoons extra virgin olive oil
     - 1 sprig fresh rosemary, needles only
-    - Extra salt and pepper
+    - Coarse sea salt and ground black pepper, for topping
 instructions:
     - In a large bowl, mix the yeast with warm water and sugar. Let it stand for about 5 minutes, until the yeast gets bubbly. Then stir in the olive oil and salt.
     - Add 1 cup of flour and mix well before adding the second cup of flour. The dough should start to get less sticky. Start kneading the dough, adding more flour if the dough is sticking to your hands. 
@@ -23,7 +23,7 @@ instructions:
     - Punch the dough down. You can either place it in the fridge for one more rise overnight or bake right away. We usually let the dough rise in the fridge overnight.
     - Press the dough into a circular 9” cake pan to about an inch thick. 
     - Make dimples in the dough with your fingers, spaced uniformly. This prevents the dough from rising too much in the oven and it gives it that nice focaccia look we all know and love.
-    - Drizzle some olive oil over the focaccia and season with more salt, pepper, and fresh rosemary.
+    - Drizzle some olive oil over the focaccia and season with more coarse sea salt, ground black pepper, and fresh rosemary.
     - Place the cake pan in the oven, preheated at 400 degrees F. Bake for 20 minutes, or until the focaccia is lightly golden brown. A toothpick inserted in the middle should come out completely clean. 
     - Cut into slices or squares and drizzle on some more olive oil before serving.
 ---

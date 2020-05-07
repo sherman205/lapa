@@ -17,14 +17,14 @@ ingredients:
     - ½ cup sour cream
     - 3 large eggs
     - 2 tablespoons flour
-    - 2 teaspoons vanilla extract
+    - 2 teaspoons pure vanilla extract
     - ½ teaspoon lemon zest
-    - Salt to taste
+    - Pinch of sea salt
 instructions:
     - Preheat the oven to 350 degrees F. In a medium bowl, mix together the graham cracker crumbs and melted butter. Add in cinnamon and a pinch of salt and stir until combined.
     - Press the graham cracker mixture evenly into the bottom of a 9 inch springform pan.
     - Bake for about 10 minutes, and remove to cool, reducing the oven temperature to 325 degrees F.
-    - In a large bowl, mix the cream cheese and sugar using an electric mixer. Add in the sour cream, flour, vanilla, lemon zest, and a pinch of salt. Beat until just combined. Add the eggs in one by one until the batter is smooth and creamy.
+    - In a large bowl, mix the cream cheese and sugar using an electric mixer. Add in the sour cream, flour, vanilla extract, lemon zest, and a pinch of salt. Beat until just combined. Add the eggs in one by one until the batter is smooth and creamy.
     - Pour the batter into the springform pan over the graham cracker crust.
     - Drop teaspoons of the marionberry sauce all over the cheesecake and use a chopstick to swirl the sauce around, creating a design of your choosing.
     - In order to prevent the cheesecake from cracking, make a bath. Place the springform pan in a roasting pan and pour hot water into the roasting pan halfway up the springform pan and place in the oven.

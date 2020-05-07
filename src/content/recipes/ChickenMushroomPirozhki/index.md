@@ -13,8 +13,8 @@ ingredients:
   - 8 oz. mushrooms, sliced
   - 8 squares (5”x5”) puff pastry dough (or about 18 oz.)
   - 1 egg
-  - Salt, to taste
-  - Pepper, to taste
+  - Sea salt, to taste
+  - Ground black pepper, to taste
 instructions:
   - Separate the meat from the bones of the rotisserie chicken. It is important to use both the white and dark meat, especially because the dark meat adds moisture so that the filling doesn’t turn out too dry. Place the chicken in a large bowl and set aside.
   - Sauté the mushroom and onion in a skillet until browned and starts to give off excess moisture. Add the mushroom and onion mixture to the bowl with the chicken.

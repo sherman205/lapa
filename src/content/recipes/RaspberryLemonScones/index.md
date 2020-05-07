@@ -15,14 +15,14 @@ ingredients:
   - 1½ teaspoons baking powder
   - 8 tablespoons unsalted frozen butter
   - ½ cup plain yogurt
-  - 1 teaspoon vanilla extract
+  - 1 teaspoon pure vanilla extract
   - Zest of 1 lemon
-  - ½ teaspoon salt
+  - ½ teaspoon sea salt
 instructions:
   - Preheat the oven to 400 degrees F. 
   - In a medium bowl, mix together the lemon zest and sugar using your fingers. Add in baking powder, flour, and salt and keep mixing.
   - Grate the butter into the flour mixture and use a fork to blend in the butter until everything is well combined.
-  - In a separate bowl, whisk together the yogurt, egg, and vanilla until smooth.
+  - In a separate bowl, whisk together the yogurt, egg, and vanilla extract until smooth.
   - Add the wet ingredients into the flour mixture and mix until a dough starts to form. You may have to use your hands at this point to press the dough against the bowl as you’re kneading it.
   - Fold in the raspberries gently. They may get crushed a little, but that’s okay!
   - Place the dough on a lightly floured surface and pat it into a circle, about ¾ inch thick. Use a knife to cut the dough like you would a pizza -- into 8 slices.

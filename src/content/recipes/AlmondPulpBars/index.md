@@ -18,11 +18,11 @@ ingredients:
   - ½ teaspoon sea salt
   - ¼ cup almond butter
   - ¼ cup peanut butter
-  - 2 teaspoons vanilla extract
-  - 1.5 oz. baking chocolate, crushed or ½ cup mini chocolate chips
+  - 2 teaspoons pure vanilla extract
+  - 1½ oz. baking chocolate, crushed or ½ cup mini chocolate chips
 instructions:
   - Preheat an oven to 350 degrees. In a large bowl, whisk together the dry ingredients -- almond pulp, chia seeds, flaxseed, oats, sea salt, and cinnamon.
-  - In a separate bowl, whisk an egg. Stir in vanilla, nut butters and honey until very smooth.
+  - In a separate bowl, whisk an egg. Stir in vanilla extract, nut butters and honey until very smooth.
   - Add the wet mixture into the dry ingredients and stir until sticky and absorbed. Fold in the chocolate gently.
   - Pour the almond mixture into a loaf pan lined with parchment paper and spread it out evenly. Bake for 30 minutes until firm and golden brown. 
   - Cool before cutting into bars and enjoy!

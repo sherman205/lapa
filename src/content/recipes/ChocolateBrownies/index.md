@@ -12,12 +12,12 @@ ingredients:
     - 1 cup butter
     - 5 eggs
     - 3 cups of sugar
-    - 1 tablespoon vanilla
+    - 1 tablespoon pure vanilla extract
     - 1½ cups of flour
 instructions:
     - Preheat the oven to 375 degrees F.
     - Melt the chocolate and butter in a saucepan.
-    - Beat the eggs, sugar, and vanilla in a large mixing bowl for about 10 minutes using an electric mixer.
+    - Beat the eggs, sugar, and vanilla extract in a large mixing bowl for about 10 minutes using an electric mixer.
     - Blend in the melted chocolate at low speed.
     - Sift flour in slowly and continue mixing.
     - Pour the brownie mixture into a greased 13x9 inch pan.

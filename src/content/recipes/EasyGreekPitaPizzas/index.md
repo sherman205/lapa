@@ -17,7 +17,7 @@ ingredients:
     - 1 mushroom, sliced
     - A few slices of onion
     - Grated parmesan cheese, to top
-    - Pinch of pepper
+    - Pinch of ground black pepper
 instructions:
     - Preheat the oven to 350 degrees F. Line a baking sheet with foil.
     - Place the Greek pitas onto the baking sheet and spread the pesto sauce on one pita and the tomato sauce on the other pita.

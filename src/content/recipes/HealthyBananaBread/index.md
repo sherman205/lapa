@@ -15,14 +15,14 @@ ingredients:
     - 2 medium old bananas, mashed
     - ½ teaspoon ground cinnamon
     - ¼ cup milk
-    - 1 teaspoon vanilla extract
+    - 1 teaspoon pure vanilla extract
     - 1 teaspoon baking soda
-    - ½ teaspoon salt
+    - ½ teaspoon sea salt
     - ½ cup chopped walnuts
 instructions:
     - Preheat the oven to 325 degrees and line a 9x5 inch loaf pan with parchment paper. 
     - In a large bowl, whisk together the coconut oil and maple syrup until it thickens. Then add the eggs and mix well. Then whisk in the mashed bananas and milk. 
-    - Add the baking soda, vanilla, cinnamon, and salt into the banana mixture and combine well. 
+    - Add the baking soda, vanilla extract, cinnamon, and salt into the banana mixture and combine well. 
     - Finally add in the flour and stir with a large spoon to avoid the batter getting stuck in your whisk. Add in the chopped walnuts.
     - Pour the batter into the loaf pan and place in the oven for about 60 minutes, or until a toothpick inserted into the center comes out clean.
     - Let cool in the loaf pan for about 10 minutes before taking the banana bread out and allow it to finish cooling on a cooling rack. 

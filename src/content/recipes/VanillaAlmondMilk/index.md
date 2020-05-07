@@ -11,11 +11,11 @@ ingredients:
     - 1 cup raw almonds
     - 5 cups drinking water
     - 4-6 pitted dates
-    - ½ teaspoon vanilla extract
+    - ½ teaspoon pure vanilla extract
     - ½ teaspoon cinnamon
 instructions:
     - Soak the almonds in a bowl of water to soften them up to blend. You can do this overnight or over the course of an hour or so. 
-    - Add the almonds, water, dates, vanilla, and cinnamon into a blender. You can alter how many dates to add, based on your preferred level of sweetness. 
+    - Add the almonds, water, dates, vanilla extract, and cinnamon into a blender. You can alter how many dates to add, based on your preferred level of sweetness. 
     - Blend until creamy and smooth, for about 2 minutes. 
     - Strain the almond pulp through a cheesecloth or nut milk bag, collecting the milk in a bowl. Squeeze the bag to extract as much almond milk as possible. 
     - Store the almond milk in a carafe or pitcher and save the leftover almond pulp for use in other yummy recipes.

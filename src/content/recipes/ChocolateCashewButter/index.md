@@ -10,7 +10,7 @@ totalTime: "15 minutes"
 ingredients:
     - 3 cups roasted cashews
     - 3 tablespoons cocoa powder
-    - Pinch of salt
+    - Pinch of sea salt
 instructions:
     - Add the cashews to a food processor and blend until they are creamy and start to resemble nut butter, for about 10 minutes.
     - Add in the cocoa powder and salt and continue blending until smooth and combined.

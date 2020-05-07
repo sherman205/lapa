@@ -17,8 +17,8 @@ ingredients:
     - Feta cheese, crumbled
     - ¼ cup non-refined sunflower oil
     - ¼ cup seasoned rice vinegar 
-    - ¼ teaspoon salt
-    - ¼ teaspoon pepper
+    - ¼ teaspoon sea salt
+    - ¼ teaspoon ground black pepper
 instructions:
     - Mix the cucumber and onion in a large bowl. Season with a little salt. It is especially important to salt the cucumbers separately from the dressing, since they will absorb that saltiness and improve the flavor of the salad. 
     - Add the rest of the vegetables to the bowl.

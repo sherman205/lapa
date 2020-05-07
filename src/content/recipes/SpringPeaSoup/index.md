@@ -16,8 +16,8 @@ ingredients:
     - ½ tablespoon chopped parsley
     - 2 sprigs of fresh rosemary, needles only
     - Pinch of cayenne pepper
-    - Salt, to taste
-    - Pepper, to taste
+    - Sea Salt, to taste
+    - Ground black pepper, to taste
 instructions:
     - In a 4 quart soup pot, heat some olive oil. Add in the chopped onion and 1 clove of grated garlic and cook over moderate heat until the onions are softened but not browned, about 5 minutes. 
     - Add the vegetable stock and bring to a boil. Season the broth with the parsley and the needles from one sprig of rosemary and a pinch of salt. 

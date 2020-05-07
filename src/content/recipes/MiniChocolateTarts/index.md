@@ -15,7 +15,7 @@ ingredients:
   - ¼ cup coconut oil, melted
   - 2 tablespoons agave nectar
   - ¼ teaspoon cinnamon
-  - Pinch of salt
+  - Pinch of sea salt
 instructions:
   - Preheat the oven to 350 degrees F.
   - Combine all of the tart shell ingredients into a blender and pulse until the mixture is coarsely ground.
@@ -27,7 +27,7 @@ ingredients_list_2:
   - 1 tablespoon coconut oil
   - 4 ounces vegan dark chocolate, melted
   - 3 tablespoons agave nectar
-  - Pinch of salt
+  - Pinch of sea salt
 instructions_list_2:
   - In a medium bowl, dissolve the cocoa powder in the hot water using a whisk.
   - Add the coconut oil, melted chocolate, agave nectar and salt. Whisk until smooth and the mixture thickens slightly.

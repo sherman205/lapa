@@ -13,8 +13,8 @@ ingredients:
     - 3 cups spinach, chopped
     - ¼ cup sun dried tomatoes, chopped
     - ½ cup parmesan cheese, grated
-    - Salt to taste
-    - Pepper to taste
+    - Sea salt, to taste
+    - Ground black pepper, to taste
 instructions:
     - Bring a pot of water to a boil on the stovetop. Add in the tortellini once the water is boiling. Cook for about 8 minutes, or until the tortellini is soft. 
     - Drain the tortellini and rinse with cold water.

@@ -11,7 +11,7 @@ list_1: "Quiche dough"
 list_2: "Quiche filling"
 ingredients:
     - 2 cups flour
-    - 1 teaspoon salt
+    - 1 teaspoon sea salt
     - ½ cup ice water
     - ½ cup olive oil
 instructions:
@@ -33,8 +33,8 @@ ingredients_list_2:
     - 1 cup milk
     - ½ teaspoon thyme
     - ¼ teaspoon fresh nutmeg, grated
-    - Salt to taste
-    - Pepper to taste
+    - Sea salt, to taste
+    - Ground black pepper, to taste
 instructions_list_2:
     - Remove some of the excess bacon fat, but leave some in the pan, because we are going to saute the onion and then the spinach in the same pan, using the flavor from the bacon. 
     - Add the onions and fry for a few minutes until they are slightly browned. Remove from the pan and set aside. 

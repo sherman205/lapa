@@ -15,8 +15,8 @@ ingredients:
     - 1 tablespoon lemon juice
     - Olive oil drizzle
     - Handful of chopped cashews
-    - Pinch of salt
-    - Pinch of pepper
+    - Pinch of sea salt
+    - Pinch of ground black pepper
 instructions:
     - Wash and wrap each of the eggplants in aluminum foil. Turn on a stovetop burner to low heat and place them directly onto the burner. 
     - Heat the eggplants for about 15-20 minutes on the stovetop, or until they are soft and start to smoke a little. Make sure to rotate them halfway through to make they get cooked on both sides.

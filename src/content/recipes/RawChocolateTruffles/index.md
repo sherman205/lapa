@@ -10,13 +10,13 @@ totalTime: "20 minutes"
 ingredients:
     - 1 cup pitted dates
     - 1½ cups walnuts
-    - 1 teaspoon vanilla
+    - 1 teaspoon pure vanilla extract
     - ⅓ cup unsweetened cocoa powder
     - 1 ounce semi-sweet baking chocolate bar, chopped
-    - Pinch of salt
+    - Pinch of sea salt
 instructions:
     - Add the walnuts to a food processor and blend until they are finely ground.
-    - Add in the dates, vanilla, cocoa powder, and salt. Mix until the mixture starts coming together.
+    - Add in the dates, vanilla extract, cocoa powder, and salt. Mix until the mixture starts coming together.
     - Add in the chopped chocolate and pulse until it gets mixed in.
     - Using a rubber spatula, transfer the mixture to a bowl. Form small round balls with your hands, rolling them in your palm.
     - Store in an airtight container in the fridge and indulge often.

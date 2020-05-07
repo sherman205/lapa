@@ -10,10 +10,10 @@ totalTime: "30 minutes"
 ingredients:
   - ½ cup unsalted butter
   - ¼ cup powdered sugar + extra for powdering later
-  - 1 teaspoon vanilla extract
+  - 1 teaspoon pure vanilla extract
   - ½ cup raw almonds, chopped
   - 1¼ cup flour
-  - Pinch of salt
+  - Pinch of sea salt
 instructions:
   - Preheat the oven to 375 degrees F.
   - Using an electric mixer, mix together the butter and powdered sugar until creamy. Add in the vanilla extract and continue mixing.

@@ -13,12 +13,12 @@ ingredients:
     - ¼ cup sugar
     - 14 oz. sweetened condensed milk
     - 2 cups heavy cream
-    - 2 teaspoons vanilla
+    - 2 teaspoons pure vanilla extract
     - 1 cup crushed graham crackers 
 instructions:
     - In a medium saucepan, heat the blueberries, cinnamon, and sugar over medium high heat until the jam thickens and all the sugar is dissolved, about 10 minutes or so. Keep stirring constantly to avoid burning. 
     - Let the jam cool slightly and then place in the fridge for about an hour to cool completely.
-    - Whisk together the heavy cream and vanilla with an electric mixer until stiff peaks form. 
+    - Whisk together the heavy cream and vanilla extract with an electric mixer until stiff peaks form. 
     - Gently fold in the sweetened condensed milk.
     - Line a loaf pan with parchment paper and pour half of the sweet cream into the bottom of the pan. Scoop some blueberry jam and graham cracker pieces on top. Swirl around with a knife to mix and create a marbled texture. 
     - Repeat this step one more time and pour the rest of the cream mixture on top and add the rest of the blueberry jam and graham crackers on top. Swirl with a knife again.

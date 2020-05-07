@@ -12,7 +12,7 @@ ingredients:
   - ½ cup milk
   - 1 tablespoon sour cream
   - 1 tablespoon sugar
-  - Salt to taste
+  - Pinch of sea salt
 instructions:
   - Heat the milk in a large oven-safe pot (we use one that’s made from enamel) at medium high heat on a stovetop. 
   - When the milk starts to bubble, add sour cream and mix well until it is dissolved.

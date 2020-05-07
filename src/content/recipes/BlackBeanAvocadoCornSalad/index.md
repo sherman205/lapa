@@ -17,8 +17,8 @@ ingredients:
     - 1 garlic clove, grated
     - ¼ teaspoon dried oregano
     - ¾ teaspoon cayenne
-    - ¾ teaspoon salt
-    - ¼ teaspoon pepper
+    - ¾ teaspoon sea salt
+    - ¼ teaspoon ground black pepper
 instructions:
     - Whisk together the ingredients for the dressing in a small bowl. 
     - Mix the corn, beans, and avocado in a large bowl.
