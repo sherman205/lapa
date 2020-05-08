@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import NavSmall from '../components/navSmall';
 import NavMobile from '../components/navMobile';
 import FooterSmall from '../components/footerSmall';
-import Root from '../components/root';
+import SEO from '../components/seo';
 import '../styles/recipes.scss';
 
 export default class Recipes extends Component {
@@ -70,7 +70,7 @@ export default class Recipes extends Component {
             if (!isMobile) {
                 return (
                     <>
-                        <Root metadata={data.metadata.siteMetadata} />
+                        <SEO title="Recipes"/>
                         <NavSmall />
                         <div className="recipe-categories">
                             <div className="categories-intro playfair">
@@ -91,7 +91,7 @@ export default class Recipes extends Component {
             else {
                 return (
                     <>
-                        <Root metadata={data.metadata.siteMetadata} />
+                        <SEO title="Recipes"/>
                         <NavMobile />
                         <div className="recipe-categories-mobile">
                             <div className="categories-intro playfair">
@@ -184,12 +184,6 @@ export const pageQuery = graphql`
             }
           }
         }
-      }
-    }
-    metadata: site {
-      siteMetadata {
-        title
-        description
       }
     }
   }

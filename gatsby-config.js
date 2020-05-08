@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Lapa`,
-    siteUrl: `https://www.lapa-eats.com`,
-    description: `Food blog built with React and Gatsby`
+    title: "Lapa Eats",
+    titleTemplate: "%s · Modern + global recipes to fuel your mind, body, and heart",
+    description: "Making everyday food look beautiful. Your go-to place for finding creative and slightly nostalgic recipes for all occasions.",
+    url: "https://www.lapa-eats.com",
+    image: "/src/images/favicon-lapa.png"
   },
   plugins: [
     `gatsby-plugin-sass`,

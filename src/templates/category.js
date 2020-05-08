@@ -4,7 +4,9 @@ import NavSmall from '../components/navSmall';
 import NavMobile from '../components/navMobile';
 import FooterSmall from '../components/footerSmall';
 import RecipePreview from '../components/recipePreview';
+import SEO from '../components/seo';
 import './category.scss';
+import { string } from "prop-types";
 
 export default class Category extends Component {
 	constructor(props) {
@@ -42,11 +44,14 @@ export default class Category extends Component {
     const { data, pageContext } = this.props;
     const { tag } = pageContext;
     const isMobile = width <= 650;
+
+    const seoTag = "Your search results for " + tag;
     
     if (isLoaded) {
       if (!isMobile) {
         return (
           <>
+            <SEO title={seoTag} />
             <NavSmall />
             <div className="recipe-filtered">
               <div className="results">
@@ -62,6 +67,7 @@ export default class Category extends Component {
       else {
         return (
           <>
+            <SEO title={seoTag} />
             <NavMobile />
             <div className="recipe-filtered-mobile">
               <div className="results">

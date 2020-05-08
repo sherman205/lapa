@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { graphql } from "gatsby";
-import Root from '../components/root';
+import SEO from '../components/seo';
 import Nav from '../components/nav';
 import NavMobile from '../components/navMobile';
 import MobileSplash from '../components/mobileSplash';
@@ -50,7 +50,7 @@ export default class Index extends Component {
       if (!isMobile) {
         return (
           <>
-            <Root metadata={data.metadata.siteMetadata} />
+            <SEO title="Home"/>
             <div className="home">
               <Nav />
               <Splash />
@@ -78,7 +78,7 @@ export default class Index extends Component {
       else{
         return(
           <>
-            <Root metadata={data.metadata.siteMetadata} />
+            <SEO title="Home"/>
             <NavMobile />
             <div className="mobile-home">
               <MobileSplash />
@@ -129,12 +129,6 @@ export const query = graphql`
           }
           html
         }
-      }
-    }
-    metadata: site {
-      siteMetadata {
-        title
-        description
       }
     }
   }
