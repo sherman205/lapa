@@ -8,7 +8,7 @@ import '../styles/404.scss';
 const NoResults = () => {
 	return (
         <>
-            <SEO title="No results found" />
+            <SEO title="No results found"/>
             <NavSmall />
             <div className="recipe-filtered">
                 <div className="results">

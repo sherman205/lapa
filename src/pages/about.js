@@ -49,7 +49,7 @@ export default class About extends Component {
       if (!isMobile) {
         return (
           <>
-            <SEO title="About"/>
+            <SEO title="About" pathname={this.props.location.pathname}/>
             <div className="about">
                 <div className="about-left">
                     <NavSmall />
@@ -69,7 +69,7 @@ export default class About extends Component {
       else {
         return (
           <>
-            <SEO title="About"/>
+            <SEO title="About" pathname={this.props.location.pathname}/>
             <NavMobile />
             <div className="mobile-about">
                 <div className="about-content">

@@ -136,7 +136,7 @@ export default class Contact extends Component {
             if (!isMobile) {
                 return (
                     <>
-                        <SEO title="Contact"/>
+                        <SEO title="Contact" pathname={this.props.location.pathname}/>
                         <NavSmall />
                         <div className="contact">
                             <div className="contact-left">
@@ -192,7 +192,7 @@ export default class Contact extends Component {
             else {
                 return (
                     <>
-                        <SEO title="Contact"/>
+                        <SEO title="Contact" pathname={this.props.location.pathname}/>
                         <NavMobile />
                         <div className="mobile-contact">
                             <div className="contact-content">

@@ -70,7 +70,7 @@ export default class Recipes extends Component {
             if (!isMobile) {
                 return (
                     <>
-                        <SEO title="Recipes"/>
+                        <SEO title="Recipes" pathname={this.props.location.pathname}/>
                         <NavSmall />
                         <div className="recipe-categories">
                             <div className="categories-intro playfair">
@@ -91,7 +91,7 @@ export default class Recipes extends Component {
             else {
                 return (
                     <>
-                        <SEO title="Recipes"/>
+                        <SEO title="Recipes" pathname={this.props.location.pathname}/>
                         <NavMobile />
                         <div className="recipe-categories-mobile">
                             <div className="categories-intro playfair">

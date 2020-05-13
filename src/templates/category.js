@@ -51,7 +51,7 @@ export default class Category extends Component {
       if (!isMobile) {
         return (
           <>
-            <SEO title={seoTag} />
+            <SEO title={seoTag} pathname={this.props.location.pathname}/>
             <NavSmall />
             <div className="recipe-filtered">
               <div className="results">
@@ -67,7 +67,7 @@ export default class Category extends Component {
       else {
         return (
           <>
-            <SEO title={seoTag} />
+            <SEO title={seoTag} pathname={this.props.location.pathname}/>
             <NavMobile />
             <div className="recipe-filtered-mobile">
               <div className="results">
