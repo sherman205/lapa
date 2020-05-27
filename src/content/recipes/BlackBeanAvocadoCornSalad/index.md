@@ -35,4 +35,3 @@ We have Ryan's mom to thank for this creation -- I couldn't stop eating this the
 The cayenne in the dressing blends really well with the honey and lime, so you don't even feel the spiciness. We have a huge bottle of dried cayenne at home, which we rarely use. It's pretty sad, really, but this is one of those few times we whip it out. We haven't been used to spicy food, so we've always been hesitant to cook with it. But if you're worried about spice, you don't have to worry about that with this dressing. You could reduce the amount of cayenne if you want, but we don't recommend taking it out of the dressing completely.
 
 It is best to prepare this salad immediately before serving, since avocado obviously has a tendency to turn brown over time. We still eat this even after it's been in the fridge for a few days, just because it's that good. But for peak freshness, we recommend eating it right away.
-
