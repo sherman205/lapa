@@ -5,7 +5,7 @@ tags: ["dessert", "ice cream", "blueberry", "graham cracker", "no-churn"]
 featuredImage: ./blueberry_graham_cracker_ice_cream_1x1.jpg
 recipeImage: ./blueberry_graham_cracker_ice_cream_3x4.jpg
 description: "An easy-to-make no churn ice cream, flavored with vibrant summer blueberries and bits of graham cracker."
-servingSize: "1 pound"
+servingSize: "1 quart"
 totalTime: "20 minutes"
 ingredients:
     - 1 pint fresh blueberries

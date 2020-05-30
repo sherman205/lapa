@@ -4,7 +4,7 @@ title: "Mango Avocado Fish Tacos"
 tags: ["mango avocado fish tacos", "mango", "avocado", "fish", "tacos", "fish tacos", "mango avocado salsa", "lime crema", "entrees"]
 featuredImage: ./mango_avo_fish_tacos_1x1.jpg
 recipeImage: ./mango_avo_fish_tacos_3x4.jpg
-description: "Caution: seriously amazing festive tropical fish tacos. Pairs well with some margaritas or cerveza!"
+description: "Caution: seriously amazing fish tacos with a tropical flair. Pairs well with some margaritas or cerveza!"
 servingSize: "6 servings"
 totalTime: "40 minutes"
 list_1: "Mango Avocado Salsa"
