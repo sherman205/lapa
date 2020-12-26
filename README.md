@@ -1,13 +1,16 @@
 <div align="center">
-  <div>
-    <img alt="Lapa" src="./src/images/favicon-lapa.png" width="60" />
-  </div>
+  <img alt="Lapa" src="./src/images/favicon-lapa.png" width="100" />
 </div>
 <h1 align="center">
   Lapa Eats
 </h1>
 <p align="center">
-  A food blog site
+  Modern + global recipes: a food blog site
+</p>
+<p align="center">
+  <a href="https://app.netlify.com/sites/lapa-eats/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/b887ee4b-ea10-4036-abcf-597e659569c3/deploy-status" alt="Netlify Status" />
+  </a>
 </p>
 
 ## 🚀 Quick start
@@ -36,3 +39,7 @@
 | Red            | ![#ff0000](https://via.placeholder.com/10/ff0000?text=+) `#ff0000` |
 
 ## 💫 Deploy
+
+**CI/CD with Netlify**
+
+Netlify detects changes when pushing to git and triggers automated deploys. When pushing to master, Netlify builds and publishes the site.
