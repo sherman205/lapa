@@ -6,7 +6,6 @@ import FooterSmall from '../components/footerSmall';
 import RecipePreview from '../components/recipePreview';
 import SEO from '../components/seo';
 import './category.scss';
-import { string } from "prop-types";
 
 export default class Category extends Component {
 	constructor(props) {

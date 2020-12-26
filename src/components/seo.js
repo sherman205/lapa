@@ -2,15 +2,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-import favicon from '../images/favicon-lapa.png';
 
-const SEO = ({ title, description, pathname }) => {
+const SEO = ({ title, pathname, image }) => {
   const { site } = useStaticQuery(query);
 
   const overrideTemplate = pathname ? true : false;
   const pageTitle = `${title} | ${site.siteMetadata.title}`;
-  const pageDescription = description || site.siteMetadata.description;
   const canonical = pathname ? `${site.siteMetadata.url}${pathname}` : null;
+  const pageImage = `${site.siteMetadata.url}${image || site.siteMetadata.image}`;
 
   return (
     <Helmet 
@@ -27,17 +26,18 @@ const SEO = ({ title, description, pathname }) => {
           : []
       }
     >
-        <meta name="description" content={pageDescription} />
-        {pageTitle && <meta property="og:title" content={pageTitle} />}
-        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content='website' />
+        <meta name="image" content={pageImage} />
+
+        {canonical && <meta property="og:url" content={canonical} />}
+        {pageTitle && <meta property="og:title" content={pageTitle} />}
     </Helmet>
   );
 }
 
 SEO.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.string
+  image: PropTypes.string,
 }
 
 export default SEO
@@ -48,8 +48,8 @@ const query = graphql`
       siteMetadata {
         title
         titleTemplate
-        description
         url
+        image
       }
     }
   }
