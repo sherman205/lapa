@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { kebabCase } from 'lodash';
-import Root from '../components/root';
+import SEO from '../components/seo';
 
 const Results = ({ data }) => {
   const allTags = data.results.group;
 
   return (
     <div>
-        <Root metadata={data.metadata.siteMetadata} />
+        <SEO title="Tags"/>
         <h1>Tags</h1>
         <ul>
           {allTags.map(tag => (
@@ -29,12 +29,6 @@ export const pageQuery = graphql`
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
-      }
-    }
-    metadata: site {
-      siteMetadata {
-        title
-        description
       }
     }
   }

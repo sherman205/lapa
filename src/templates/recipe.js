@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import NavSmall from '../components/navSmall';
 import NavMobile from '../components/navMobile';
 import FooterSmall from '../components/footerSmall';
-import Root from '../components/root';
+import SEO from '../components/seo';
 import './recipe.scss';
 
 export default class Recipe extends Component {
@@ -43,6 +43,7 @@ export default class Recipe extends Component {
     const { data } = this.props;
     const { markdownRemark } = data;
     const { title,
+            description,
             date,
             servingSize,
             totalTime,
@@ -59,12 +60,9 @@ export default class Recipe extends Component {
 
     if (isLoaded) {
       if (!isMobile) {
-        console.log(instructions)
-        console.log(instructions_list_2);
-
         return (
           <div className="recipe">
-            <Root metadata={data.metadata.siteMetadata} />
+            <SEO title={title} description={description} pathname={this.props.location.pathname}/>
             <div className="recipe-left">
               <NavSmall />
               <div className="recipe-content">
@@ -127,7 +125,7 @@ export default class Recipe extends Component {
       else {
         return (
           <>
-            <Root metadata={data.metadata.siteMetadata} />
+            <SEO title={title} description={description} pathname={this.props.location.pathname}/>
             <NavMobile />
             <div className="recipe-mobile">
               <div className="recipe-preview-mobile">
@@ -199,6 +197,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
         date
         servingSize
         totalTime
@@ -215,12 +214,6 @@ export const query = graphql`
             }
           }
         }
-      }
-    }
-    metadata: site {
-      siteMetadata {
-        title
-        description
       }
     }
   }

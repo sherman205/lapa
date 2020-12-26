@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { graphql } from "gatsby";
-import Root from '../components/root';
+import SEO from '../components/seo';
 import NavSmall from '../components/navSmall';
 import NavMobile from '../components/navMobile';
 import FooterSmall from '../components/footerSmall';
@@ -126,7 +125,6 @@ export default class Contact extends Component {
     }
 
     render() {
-        const { data } = this.props;
         const { width, isLoaded, validation, name, email, subject, message } = this.state;
         const isMobile = width <= 650;
         const contact_info = `<p>Questions, suggestions, concerns? We would love to hear from you!</p>
@@ -138,7 +136,7 @@ export default class Contact extends Component {
             if (!isMobile) {
                 return (
                     <>
-                        <Root metadata={data.metadata.siteMetadata} />
+                        <SEO title="Contact" pathname={this.props.location.pathname}/>
                         <NavSmall />
                         <div className="contact">
                             <div className="contact-left">
@@ -194,7 +192,7 @@ export default class Contact extends Component {
             else {
                 return (
                     <>
-                        <Root metadata={data.metadata.siteMetadata} />
+                        <SEO title="Contact" pathname={this.props.location.pathname}/>
                         <NavMobile />
                         <div className="mobile-contact">
                             <div className="contact-content">
@@ -233,14 +231,3 @@ export default class Contact extends Component {
         }
     }
 }
-
-export const pageQuery = graphql`
-  {
-    metadata: site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;

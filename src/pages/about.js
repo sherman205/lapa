@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import NavSmall from '../components/navSmall';
 import FooterSmall from '../components/footerSmall';
 import NavMobile from '../components/navMobile';
-import Root from '../components/root';
+import SEO from '../components/seo';
 import '../styles/about.scss';
 
 export default class About extends Component {
@@ -49,7 +49,7 @@ export default class About extends Component {
       if (!isMobile) {
         return (
           <>
-            <Root metadata={data.metadata.siteMetadata} />
+            <SEO title="About" pathname={this.props.location.pathname}/>
             <div className="about">
                 <div className="about-left">
                     <NavSmall />
@@ -69,7 +69,7 @@ export default class About extends Component {
       else {
         return (
           <>
-            <Root metadata={data.metadata.siteMetadata} />
+            <SEO title="About" pathname={this.props.location.pathname}/>
             <NavMobile />
             <div className="mobile-about">
                 <div className="about-content">
@@ -113,12 +113,6 @@ export const query = graphql`
             }
           }
         }
-      }
-    }
-  metadata: site {
-    siteMetadata {
-      title
-      description
       }
     }
   }

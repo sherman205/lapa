@@ -1,16 +1,14 @@
 import React from 'react';
-import { graphql } from "gatsby";
 import NavSmall from '../components/navSmall';
 import FooterSmall from '../components/footerSmall';
 import SearchNoResults from '../components/searchNoResults';
-import Root from '../components/root';
-
+import SEO from '../components/seo';
 import '../styles/404.scss';
 
-const NoResults = ( {data} ) => {
+const NoResults = () => {
 	return (
         <>
-            <Root metadata={data.metadata.siteMetadata} />
+            <SEO title="No results found"/>
             <NavSmall />
             <div className="recipe-filtered">
                 <div className="results">
@@ -22,16 +20,5 @@ const NoResults = ( {data} ) => {
         </>
     );
 }
-
-export const pageQuery = graphql`
-  {
-    metadata: site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;
 
 export default NoResults;
